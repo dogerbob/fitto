@@ -49,7 +49,6 @@ class AppLocalizations {
       'fats': 'Fats',
       'chat_placeholder': 'Ask your AI coach...',
       'send': 'Send',
-      'water_tracker': 'Water Tracker',
     },
     'tr': {
       'app_name': 'Fitto',
@@ -100,7 +99,6 @@ class AppLocalizations {
       'fats': 'Yağ',
       'chat_placeholder': 'AI koçunuza sorun...',
       'send': 'Gönder',
-      'water_tracker': 'Su Takibi',
     },
   };
 

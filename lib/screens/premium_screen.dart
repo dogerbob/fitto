@@ -48,7 +48,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Color(0xFFFF6B6B), Color(0xFFFF9F43), Color(0xFF4FC3F7)],
+            colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5), Color(0xFFA8D8EA)],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
@@ -76,7 +76,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
                           GradientButton(
                             text: AppLocalizations.get('subscribe', locale),
                             onPressed: _handleSubscribe,
-                            colors: [Color(0xFFFF6B6B), Color(0xFFFF9F43)],
+                            colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)],
                           ),
                           SizedBox(height: 16),
                           Text('Cancel anytime. 7-day free trial.', style: TextStyle(fontSize: 12, color: Colors.grey.shade600), textAlign: TextAlign.center),
@@ -136,7 +136,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
           decoration: BoxDecoration(
             color: Theme.of(context).brightness == Brightness.dark ? Color(0xFF2A2A2A) : Color(0xFFFFFBFE),
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: Color(0xFFFF6B6B).withValues(alpha: 0.2)),
+            border: Border.all(color: Color(0xFFFFB4C8).withValues(alpha: 0.2)),
           ),
           child: Row(
             children: [
@@ -144,7 +144,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
                 width: 48,
                 height: 48,
                 decoration: BoxDecoration(
-                  gradient: LinearGradient(colors: [Color(0xFFFF6B6B), Color(0xFFFF9F43)]),
+                  gradient: LinearGradient(colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)]),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Icon(feature['icon'] as IconData, color: Colors.white),
@@ -176,14 +176,14 @@ class _PremiumScreenState extends State<PremiumScreen> {
         margin: EdgeInsets.only(bottom: 16),
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
-          gradient: isSelected ? LinearGradient(colors: [Color(0xFFFF6B6B), Color(0xFFFF9F43)]) : null,
+          gradient: isSelected ? LinearGradient(colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)]) : null,
           color: isSelected ? null : (Theme.of(context).brightness == Brightness.dark ? Color(0xFF2A2A2A) : Colors.white),
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
-            color: isSelected ? Colors.transparent : (plan.isPopular ? Color(0xFFFF6B6B) : Colors.grey.shade300),
+            color: isSelected ? Colors.transparent : (plan.isPopular ? Color(0xFFFFB4C8) : Colors.grey.shade300),
             width: 2,
           ),
-          boxShadow: isSelected ? [BoxShadow(color: Color(0xFFFF6B6B).withValues(alpha: 0.3), blurRadius: 12, offset: Offset(0, 6))] : null,
+          boxShadow: isSelected ? [BoxShadow(color: Color(0xFFFFB4C8).withValues(alpha: 0.3), blurRadius: 12, offset: Offset(0, 6))] : null,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -226,7 +226,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
                       Container(
                         padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                         decoration: BoxDecoration(
-                          color: isSelected ? Colors.white.withValues(alpha: 0.3) : Color(0xFFFFB84D),
+                          color: isSelected ? Colors.white.withValues(alpha: 0.3) : Color(0xFFFFEAA7),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Text('POPULAR', style: TextStyle(color: isSelected ? Colors.white : Colors.orange.shade800, fontSize: 10, fontWeight: FontWeight.bold)),
@@ -240,7 +240,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
               padding: EdgeInsets.only(bottom: 8),
               child: Row(
                 children: [
-                  Icon(Icons.check_circle, color: isSelected ? Colors.white : Color(0xFFFF6B6B), size: 20),
+                  Icon(Icons.check_circle, color: isSelected ? Colors.white : Color(0xFFFFB4C8), size: 20),
                   SizedBox(width: 8),
                   Text(feature, style: TextStyle(color: isSelected ? Colors.white.withValues(alpha: 0.9) : Colors.grey.shade700, fontSize: 14)),
                 ],

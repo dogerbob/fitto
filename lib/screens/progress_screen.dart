@@ -57,7 +57,7 @@ class _ProgressScreenState extends State<ProgressScreen> with SingleTickerProvid
                       ),
                       IconButton(
                         tooltip: 'Share',
-                        icon: Icon(Icons.ios_share, color: Color(0xFFFF6B6B)),
+                        icon: Icon(Icons.ios_share, color: Color(0xFFFFB4C8)),
                         onPressed: _shareProgress,
                       ),
                     ],
@@ -73,7 +73,7 @@ class _ProgressScreenState extends State<ProgressScreen> with SingleTickerProvid
                     child: TabBar(
                       controller: _tabController,
                       indicator: BoxDecoration(
-                        gradient: LinearGradient(colors: [Color(0xFFFF6B6B), Color(0xFFFF9F43)]),
+                        gradient: LinearGradient(colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)]),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       labelColor: Colors.white,
@@ -121,7 +121,7 @@ class _ProgressScreenState extends State<ProgressScreen> with SingleTickerProvid
           Container(
             padding: EdgeInsets.all(20),
             decoration: BoxDecoration(
-              gradient: LinearGradient(colors: [Color(0xFFFF6B6B), Color(0xFFFF9F43)]),
+              gradient: LinearGradient(colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)]),
               borderRadius: BorderRadius.circular(20),
             ),
             child: Column(
@@ -150,13 +150,13 @@ class _ProgressScreenState extends State<ProgressScreen> with SingleTickerProvid
                   LineChartBarData(
                     spots: spots,
                     isCurved: true,
-                    color: Color(0xFFFF6B6B),
+                    color: Color(0xFFFFB4C8),
                     barWidth: 3,
                     isStrokeCapRound: true,
                     dotData: FlDotData(show: true),
                     belowBarData: BarAreaData(
                       show: true,
-                      color: Color(0xFFFF6B6B).withValues(alpha: 0.2),
+                      color: Color(0xFFFFB4C8).withValues(alpha: 0.2),
                     ),
                   ),
                 ],
@@ -183,7 +183,7 @@ class _ProgressScreenState extends State<ProgressScreen> with SingleTickerProvid
           Container(
             padding: EdgeInsets.all(20),
             decoration: BoxDecoration(
-              gradient: LinearGradient(colors: [Color(0xFF4FC3F7), Color(0xFF29B6F6)]),
+              gradient: LinearGradient(colors: [Color(0xFFA8D8EA), Color(0xFF7FBFD4)]),
               borderRadius: BorderRadius.circular(20),
             ),
             child: Column(
@@ -214,7 +214,7 @@ class _ProgressScreenState extends State<ProgressScreen> with SingleTickerProvid
                     barRods: [
                       BarChartRodData(
                         toY: spot.y,
-                        color: Color(0xFF4FC3F7),
+                        color: Color(0xFFA8D8EA),
                         width: 20,
                         borderRadius: BorderRadius.vertical(top: Radius.circular(4)),
                       ),
@@ -244,7 +244,7 @@ class _ProgressScreenState extends State<ProgressScreen> with SingleTickerProvid
           Container(
             padding: EdgeInsets.all(20),
             decoration: BoxDecoration(
-              gradient: LinearGradient(colors: [Color(0xFFFF9F43), Color(0xFFFFA726)]),
+              gradient: LinearGradient(colors: [Color(0xFFE8C5E5), Color(0xFFD4A5D1)]),
               borderRadius: BorderRadius.circular(20),
             ),
             child: Column(
@@ -273,13 +273,13 @@ class _ProgressScreenState extends State<ProgressScreen> with SingleTickerProvid
                   LineChartBarData(
                     spots: spots,
                     isCurved: true,
-                    color: Color(0xFFFF9F43),
+                    color: Color(0xFFE8C5E5),
                     barWidth: 3,
                     isStrokeCapRound: true,
                     dotData: FlDotData(show: true),
                     belowBarData: BarAreaData(
                       show: true,
-                      color: Color(0xFFFF9F43).withValues(alpha: 0.2),
+                      color: Color(0xFFE8C5E5).withValues(alpha: 0.2),
                     ),
                   ),
                 ],

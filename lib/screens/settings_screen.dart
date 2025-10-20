@@ -99,9 +99,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 Container(
                   padding: EdgeInsets.all(20),
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: [Color(0xFFFF6B6B), Color(0xFFFF9F43)]),
+                    gradient: LinearGradient(colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)]),
                     borderRadius: BorderRadius.circular(20),
-                    boxShadow: [BoxShadow(color: Color(0xFFFF6B6B).withValues(alpha: 0.3), blurRadius: 12, offset: Offset(0, 6))],
+                    boxShadow: [BoxShadow(color: Color(0xFFFFB4C8).withValues(alpha: 0.3), blurRadius: 12, offset: Offset(0, 6))],
                   ),
                   child: Row(
                     children: [
@@ -195,7 +195,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 8, offset: Offset(0, 2))],
       ),
       child: ListTile(
-        leading: Icon(icon, color: Color(0xFFFF6B6B)),
+        leading: Icon(icon, color: Color(0xFFFFB4C8)),
         title: Text(title, style: TextStyle(fontWeight: FontWeight.w600)),
         subtitle: Text(subtitle, style: TextStyle(fontSize: 12, color: Colors.grey.shade600)),
         trailing: Icon(Icons.chevron_right, color: Colors.grey.shade400),
@@ -213,7 +213,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 8, offset: Offset(0, 2))],
       ),
       child: ListTile(
-        leading: Icon(Icons.language, color: Color(0xFFFF6B6B)),
+        leading: Icon(Icons.language, color: Color(0xFFFFB4C8)),
         title: Text(AppLocalizations.get('language', locale), style: TextStyle(fontWeight: FontWeight.w600)),
         trailing: DropdownButton<String>(
           value: _selectedLocale,
@@ -237,7 +237,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 8, offset: Offset(0, 2))],
       ),
       child: ListTile(
-        leading: Icon(Icons.palette, color: Color(0xFFFF6B6B)),
+        leading: Icon(Icons.palette, color: Color(0xFFFFB4C8)),
         title: Text(AppLocalizations.get('theme', locale), style: TextStyle(fontWeight: FontWeight.w600)),
         trailing: DropdownButton<String>(
           value: _selectedTheme,
@@ -262,10 +262,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
         boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 8, offset: Offset(0, 2))],
       ),
       child: SwitchListTile(
-        secondary: Icon(Icons.notifications, color: Color(0xFFFF6B6B)),
+        secondary: Icon(Icons.notifications, color: Color(0xFFFFB4C8)),
         title: Text(AppLocalizations.get('notifications', locale), style: TextStyle(fontWeight: FontWeight.w600)),
         value: _notificationsEnabled,
-        activeColor: Color(0xFFFF6B6B),
+        activeColor: Color(0xFFFFB4C8),
         onChanged: (value) async {
           setState(() => _notificationsEnabled = value);
           await _storage.saveString('notificationsEnabled', value.toString());
@@ -316,7 +316,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             width: double.infinity,
             child: FilledButton(
               onPressed: _saveProfile,
-              style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(Color(0xFFFF6B6B))),
+              style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(Color(0xFFFFB4C8))),
               child: Text('Save Profile'),
             ),
           )
@@ -336,7 +336,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       child: Column(
         children: [
           ListTile(
-            leading: Icon(Icons.alarm, color: Color(0xFFFF6B6B)),
+            leading: Icon(Icons.alarm, color: Color(0xFFFFB4C8)),
             title: Text('Daily Reminder Time', style: TextStyle(fontWeight: FontWeight.w600)),
             subtitle: Text(_formatTime(_dailyReminderTime)),
             trailing: Icon(Icons.edit, color: Colors.grey.shade500),
@@ -353,7 +353,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ),
           Divider(height: 1),
           ListTile(
-            leading: Icon(Icons.fitness_center, color: Color(0xFFFF9F43)),
+            leading: Icon(Icons.fitness_center, color: Color(0xFFE8C5E5)),
             title: Text('Workout Prompt Time', style: TextStyle(fontWeight: FontWeight.w600)),
             subtitle: Text(_formatTime(_workoutPromptTime)),
             trailing: Icon(Icons.edit, color: Colors.grey.shade500),
@@ -388,7 +388,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         readOnly: readOnly,
         keyboardType: keyboardType,
         decoration: InputDecoration(
-          prefixIcon: Icon(icon, color: Color(0xFFFF6B6B)),
+          prefixIcon: Icon(icon, color: Color(0xFFFFB4C8)),
           labelText: label,
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
         ),

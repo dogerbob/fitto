@@ -75,9 +75,9 @@ class _CoachScreenState extends State<CoachScreen> {
     return Container(
       padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
-        gradient: LinearGradient(colors: [Color(0xFFFF6B6B), Color(0xFFFF9F43)]),
+        gradient: LinearGradient(colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)]),
         borderRadius: BorderRadius.vertical(bottom: Radius.circular(24)),
-        boxShadow: [BoxShadow(color: Color(0xFFFF6B6B).withValues(alpha: 0.3), blurRadius: 12, offset: Offset(0, 6))],
+        boxShadow: [BoxShadow(color: Color(0xFFFFB4C8).withValues(alpha: 0.3), blurRadius: 12, offset: Offset(0, 6))],
       ),
       child: Column(
         children: [
@@ -168,9 +168,9 @@ class _CoachScreenState extends State<CoachScreen> {
               width: 48,
               height: 48,
               decoration: BoxDecoration(
-                gradient: LinearGradient(colors: [Color(0xFFFF6B6B), Color(0xFFFF9F43)]),
+                gradient: LinearGradient(colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)]),
                 borderRadius: BorderRadius.circular(24),
-                boxShadow: [BoxShadow(color: Color(0xFFFF6B6B).withValues(alpha: 0.3), blurRadius: 8, offset: Offset(0, 4))],
+                boxShadow: [BoxShadow(color: Color(0xFFFFB4C8).withValues(alpha: 0.3), blurRadius: 8, offset: Offset(0, 4))],
               ),
               child: _isSending
                 ? Center(child: SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2)))
