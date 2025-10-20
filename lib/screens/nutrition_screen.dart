@@ -52,9 +52,9 @@ class _NutritionScreenState extends State<NutritionScreen> {
                     Container(
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)]),
+                        gradient: LinearGradient(colors: [Color(0xFFFF6B6B), Color(0xFFFF9F43)]),
                         borderRadius: BorderRadius.circular(20),
-                        boxShadow: [BoxShadow(color: Color(0xFFFFB4C8).withValues(alpha: 0.3), blurRadius: 12, offset: Offset(0, 6))],
+                        boxShadow: [BoxShadow(color: Color(0xFFFF6B6B).withValues(alpha: 0.3), blurRadius: 12, offset: Offset(0, 6))],
                       ),
                       child: Column(
                         children: [
@@ -86,11 +86,11 @@ class _NutritionScreenState extends State<NutritionScreen> {
                     SizedBox(height: 24),
                     Row(
                       children: [
-                        Expanded(child: _buildMacroCard(AppLocalizations.get('protein', locale), '${macros['protein']?.toInt() ?? 0}g', Color(0xFFA8D8EA))),
+                        Expanded(child: _buildMacroCard(AppLocalizations.get('protein', locale), '${macros['protein']?.toInt() ?? 0}g', Color(0xFF4FC3F7))),
                         SizedBox(width: 12),
-                        Expanded(child: _buildMacroCard(AppLocalizations.get('carbs', locale), '${macros['carbs']?.toInt() ?? 0}g', Color(0xFFE8C5E5))),
+                        Expanded(child: _buildMacroCard(AppLocalizations.get('carbs', locale), '${macros['carbs']?.toInt() ?? 0}g', Color(0xFFFFB84D))),
                         SizedBox(width: 12),
-                        Expanded(child: _buildMacroCard(AppLocalizations.get('fats', locale), '${macros['fats']?.toInt() ?? 0}g', Color(0xFFFFEAA7))),
+                        Expanded(child: _buildMacroCard(AppLocalizations.get('fats', locale), '${macros['fats']?.toInt() ?? 0}g', Color(0xFFFF9F43))),
                       ],
                     ),
                     SizedBox(height: 24),
@@ -100,7 +100,7 @@ class _NutritionScreenState extends State<NutritionScreen> {
                           child: GradientButton(
                             text: AppLocalizations.get('add_meal', locale),
                             onPressed: _showAddMealDialog,
-                            colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)],
+                            colors: [Color(0xFFFF6B6B), Color(0xFFFF9F43)],
                             height: 48,
                             borderRadius: 24,
                           ),
@@ -110,9 +110,9 @@ class _NutritionScreenState extends State<NutritionScreen> {
                           height: 48,
                           width: 48,
                           decoration: BoxDecoration(
-                            gradient: LinearGradient(colors: [Color(0xFFA8D8EA), Color(0xFF7FBFD4)]),
+                            gradient: LinearGradient(colors: [Color(0xFFFF9F43), Color(0xFFFFA726)]),
                             borderRadius: BorderRadius.circular(24),
-                            boxShadow: [BoxShadow(color: Color(0xFFA8D8EA).withValues(alpha: 0.3), blurRadius: 8, offset: Offset(0, 4))],
+                            boxShadow: [BoxShadow(color: Color(0xFF4FC3F7).withValues(alpha: 0.3), blurRadius: 8, offset: Offset(0, 4))],
                           ),
                           child: IconButton(icon: Icon(Icons.camera_alt, color: Colors.white), onPressed: _showAIFoodScan),
                         ),
@@ -205,15 +205,168 @@ class _NutritionScreenState extends State<NutritionScreen> {
   }
 
   void _showAddMealDialog() {
+    final nameController = TextEditingController();
+    final servingController = TextEditingController();
+    final caloriesController = TextEditingController();
+    final proteinController = TextEditingController();
+    final carbsController = TextEditingController();
+    final fatsController = TextEditingController();
+    String selectedMealType = 'Breakfast';
+
     showDialog(
       context: context,
-      builder: (context) => AlertDialog(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        title: Text('Add Meal', style: TextStyle(fontWeight: FontWeight.bold)),
-        content: Text('Manual meal logging feature\n\nThis would allow users to input:\n• Meal name\n• Serving size\n• Calories\n• Macros (P/C/F)'),
-        actions: [
-          TextButton(onPressed: () => Navigator.pop(context), child: Text('Close')),
-        ],
+      builder: (context) => StatefulBuilder(
+        builder: (context, setDialogState) => AlertDialog(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          title: Row(
+            children: [
+              Container(
+                padding: EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(colors: [Color(0xFFFF6B6B), Color(0xFFFF9F43)]),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Icon(Icons.restaurant, color: Colors.white, size: 24),
+              ),
+              SizedBox(width: 12),
+              Text('Add Meal', style: TextStyle(fontWeight: FontWeight.bold)),
+            ],
+          ),
+          content: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                DropdownButtonFormField<String>(
+                  value: selectedMealType,
+                  decoration: InputDecoration(
+                    labelText: 'Meal Type',
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                    prefixIcon: Icon(Icons.fastfood, color: Color(0xFFFF6B6B)),
+                  ),
+                  items: AppConstants.mealTypes.map((type) => DropdownMenuItem(value: type, child: Text(type))).toList(),
+                  onChanged: (value) => setDialogState(() => selectedMealType = value!),
+                ),
+                SizedBox(height: 16),
+                TextField(
+                  controller: nameController,
+                  decoration: InputDecoration(
+                    labelText: 'Meal Name',
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                    prefixIcon: Icon(Icons.label, color: Color(0xFFFF9F43)),
+                  ),
+                ),
+                SizedBox(height: 16),
+                TextField(
+                  controller: servingController,
+                  decoration: InputDecoration(
+                    labelText: 'Serving Size',
+                    hintText: 'e.g., 1 plate, 200g',
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                    prefixIcon: Icon(Icons.scale, color: Color(0xFFFFA726)),
+                  ),
+                ),
+                SizedBox(height: 16),
+                TextField(
+                  controller: caloriesController,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(
+                    labelText: 'Calories (kcal)',
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                    prefixIcon: Icon(Icons.local_fire_department, color: Color(0xFFFF6B6B)),
+                  ),
+                ),
+                SizedBox(height: 16),
+                Row(
+                  children: [
+                    Expanded(
+                      child: TextField(
+                        controller: proteinController,
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          labelText: 'Protein (g)',
+                          border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 8),
+                    Expanded(
+                      child: TextField(
+                        controller: carbsController,
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          labelText: 'Carbs (g)',
+                          border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 8),
+                    Expanded(
+                      child: TextField(
+                        controller: fatsController,
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          labelText: 'Fats (g)',
+                          border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text('Cancel', style: TextStyle(color: Colors.grey)),
+            ),
+            ElevatedButton(
+              onPressed: () async {
+                if (nameController.text.isEmpty || caloriesController.text.isEmpty) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Please fill in meal name and calories')),
+                  );
+                  return;
+                }
+
+                final now = DateTime.now();
+                final newEntry = NutritionEntry(
+                  id: 'entry_${now.millisecondsSinceEpoch}',
+                  userId: 'user_1',
+                  date: _selectedDate,
+                  mealType: selectedMealType,
+                  name: nameController.text,
+                  calories: int.tryParse(caloriesController.text) ?? 0,
+                  protein: double.tryParse(proteinController.text) ?? 0,
+                  carbs: double.tryParse(carbsController.text) ?? 0,
+                  fats: double.tryParse(fatsController.text) ?? 0,
+                  servingSize: servingController.text.isEmpty ? '1 serving' : servingController.text,
+                  createdAt: now,
+                  updatedAt: now,
+                );
+
+                await _nutritionService.addEntry(newEntry);
+                if (mounted) setState(() {});
+                Navigator.pop(context);
+
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('Meal added successfully!'),
+                    backgroundColor: Color(0xFF4CAF50),
+                    behavior: SnackBarBehavior.floating,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                  ),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color(0xFFFF6B6B),
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+              ),
+              child: Text('Add Meal'),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -227,7 +380,7 @@ class _NutritionScreenState extends State<NutritionScreen> {
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(Icons.camera_alt, size: 64, color: Color(0xFFFFB4C8)),
+            Icon(Icons.camera_alt, size: 64, color: Color(0xFFFF6B6B)),
             SizedBox(height: 16),
             Text('Scan your food with AI\n\nThis feature will allow you to take a photo of your meal and automatically recognize the food items and nutritional information.', textAlign: TextAlign.center),
           ],

@@ -25,22 +25,22 @@ class AppConstants {
 
   static List<LinearGradient> gradients = [
     LinearGradient(
-      colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)],
+      colors: [Color(0xFFFF6B6B), Color(0xFFFF9F43)],
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
     ),
     LinearGradient(
-      colors: [Color(0xFFA8D8EA), Color(0xFF7FBFD4)],
+      colors: [Color(0xFFFF9F43), Color(0xFFFFA726)],
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
     ),
     LinearGradient(
-      colors: [Color(0xFFE8C5E5), Color(0xFFD4A5D1)],
+      colors: [Color(0xFFFFA726), Color(0xFFFFB84D)],
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
     ),
     LinearGradient(
-      colors: [Color(0xFFFFEAA7), Color(0xFFFFD97D)],
+      colors: [Color(0xFFFF7E67), Color(0xFFFFC947)],
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
     ),

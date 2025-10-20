@@ -49,7 +49,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5), Color(0xFFA8D8EA)],
+            colors: [Color(0xFFFF6B6B), Color(0xFFFF9F43), Color(0xFF4FC3F7)],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
@@ -70,7 +70,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
                       borderRadius: BorderRadius.circular(30),
                       boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.15), blurRadius: 20, offset: Offset(0, 8))],
                     ),
-                    child: Icon(Icons.fitness_center, size: 60, color: Color(0xFFFFB4C8)),
+                    child: Icon(Icons.fitness_center, size: 60, color: Color(0xFFFF6B6B)),
                   ),
                   SizedBox(height: 24),
                   Text('Fitto', style: TextStyle(color: Colors.white, fontSize: 48, fontWeight: FontWeight.bold, letterSpacing: 2)),

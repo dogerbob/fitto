@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fitto/screens/workouts_screen.dart';
 import 'package:fitto/screens/nutrition_screen.dart';
+import 'package:fitto/screens/water_screen.dart';
 import 'package:fitto/screens/progress_screen.dart';
 import 'package:fitto/screens/coach_screen.dart';
 import 'package:fitto/screens/settings_screen.dart';
@@ -49,6 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
       _buildHomeContent(),
       WorkoutsScreen(),
       NutritionScreen(),
+      WaterScreen(),
       ProgressScreen(),
       CoachScreen(),
     ];
@@ -108,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => SettingsScreen())),
                     child: CircleAvatar(
                       radius: 24,
-                      backgroundColor: Color(0xFFFFB4C8),
+                      backgroundColor: Color(0xFFFF6B6B),
                       child: Icon(Icons.person, color: Colors.white),
                     ),
                   ),
@@ -118,9 +120,9 @@ class _HomeScreenState extends State<HomeScreen> {
               Container(
                 padding: EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  gradient: LinearGradient(colors: [Color(0xFFFFEAA7), Color(0xFFFFD97D)]),
+                  gradient: LinearGradient(colors: [Color(0xFFFF9F43), Color(0xFFFFA726)]),
                   borderRadius: BorderRadius.circular(20),
-                  boxShadow: [BoxShadow(color: Color(0xFFFFEAA7).withValues(alpha: 0.3), blurRadius: 12, offset: Offset(0, 6))],
+                  boxShadow: [BoxShadow(color: Color(0xFFFF9F43).withValues(alpha: 0.3), blurRadius: 12, offset: Offset(0, 6))],
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -145,8 +147,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   progress: todayCalories / (user?.dailyCalorieGoal ?? 2200),
                   size: 160,
                   strokeWidth: 16,
-                  color: Color(0xFFFFB4C8),
-                  backgroundColor: Color(0xFFFFE4ED),
+                  color: Color(0xFFFF6B6B),
+                  backgroundColor: Color(0xFFFFE5E5),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -174,14 +176,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     value: '${waterEntry?.value.toInt() ?? 0}',
                     subtitle: '${user?.dailyWaterGoal ?? 8} glasses goal',
                     icon: Icons.water_drop,
-                    gradientColors: [Color(0xFFA8D8EA), Color(0xFF7FBFD4)],
+                    gradientColors: [Color(0xFF4FC3F7), Color(0xFF29B6F6)],
                   ),
                   StatCard(
                     title: AppLocalizations.get('steps', locale),
                     value: '${stepsEntry?.value.toInt() ?? 0}',
                     subtitle: '${user?.dailyStepsGoal ?? 10000} steps goal',
                     icon: Icons.directions_walk,
-                    gradientColors: [Color(0xFFE8C5E5), Color(0xFFD4A5D1)],
+                    gradientColors: [Color(0xFFFFB84D), Color(0xFFFFA726)],
                   ),
                 ],
               );
@@ -212,8 +214,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 _buildNavItem(Icons.home, AppLocalizations.get('home', locale), 0),
                 _buildNavItem(Icons.fitness_center, AppLocalizations.get('workouts', locale), 1),
                 _buildNavItem(Icons.restaurant, AppLocalizations.get('nutrition', locale), 2),
-                _buildNavItem(Icons.trending_up, AppLocalizations.get('progress', locale), 3),
-                _buildNavItem(Icons.psychology, AppLocalizations.get('coach', locale), 4),
+                _buildNavItem(Icons.water_drop, AppLocalizations.get('water', locale), 3),
+                _buildNavItem(Icons.trending_up, AppLocalizations.get('progress', locale), 4),
+                _buildNavItem(Icons.psychology, AppLocalizations.get('coach', locale), 5),
               ],
             ),
           ),
@@ -230,7 +233,7 @@ class _HomeScreenState extends State<HomeScreen> {
         duration: Duration(milliseconds: 250),
         padding: EdgeInsets.symmetric(horizontal: 14, vertical: 10),
         decoration: BoxDecoration(
-          gradient: isActive ? LinearGradient(colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)]) : null,
+          gradient: isActive ? LinearGradient(colors: [Color(0xFFFF6B6B), Color(0xFFFF9F43)]) : null,
           color: isActive ? null : Colors.transparent,
           borderRadius: BorderRadius.circular(16),
         ),

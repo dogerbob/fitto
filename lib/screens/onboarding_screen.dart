@@ -14,9 +14,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   int _currentPage = 0;
 
   final List<Map<String, dynamic>> _pages = [
-    {'icon': Icons.fitness_center, 'gradient': [Color(0xFFFFB4C8), Color(0xFFE8C5E5)]},
-    {'icon': Icons.psychology, 'gradient': [Color(0xFFA8D8EA), Color(0xFF7FBFD4)]},
-    {'icon': Icons.emoji_events, 'gradient': [Color(0xFFFFEAA7), Color(0xFFFFD97D)]},
+    {'icon': Icons.fitness_center, 'gradient': [Color(0xFFFF6B6B), Color(0xFFFF9F43)]},
+    {'icon': Icons.psychology, 'gradient': [Color(0xFF4FC3F7), Color(0xFF29B6F6)]},
+    {'icon': Icons.emoji_events, 'gradient': [Color(0xFFFFB84D), Color(0xFFFFA726)]},
   ];
 
   @override
@@ -105,7 +105,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           height: 8,
           decoration: BoxDecoration(
             gradient: _currentPage == index
-              ? LinearGradient(colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)])
+              ? LinearGradient(colors: [Color(0xFFFF6B6B), Color(0xFFFF9F43)])
               : null,
             color: _currentPage == index ? null : Colors.grey.shade300,
             borderRadius: BorderRadius.circular(4),
@@ -122,9 +122,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         width: double.infinity,
         height: 56,
         decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)]),
+          gradient: LinearGradient(colors: [Color(0xFFFF6B6B), Color(0xFFFF9F43)]),
           borderRadius: BorderRadius.circular(28),
-          boxShadow: [BoxShadow(color: Color(0xFFFFB4C8).withValues(alpha: 0.4), blurRadius: 12, offset: Offset(0, 6))],
+          boxShadow: [BoxShadow(color: Color(0xFFFF6B6B).withValues(alpha: 0.4), blurRadius: 12, offset: Offset(0, 6))],
         ),
         child: Center(child: Text('Next', style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600))),
       ),
@@ -138,9 +138,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         width: double.infinity,
         height: 56,
         decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)]),
+          gradient: LinearGradient(colors: [Color(0xFFFF6B6B), Color(0xFFFF9F43)]),
           borderRadius: BorderRadius.circular(28),
-          boxShadow: [BoxShadow(color: Color(0xFFFFB4C8).withValues(alpha: 0.4), blurRadius: 12, offset: Offset(0, 6))],
+          boxShadow: [BoxShadow(color: Color(0xFFFF6B6B).withValues(alpha: 0.4), blurRadius: 12, offset: Offset(0, 6))],
         ),
         child: Center(child: Text(AppLocalizations.get('start', 'en'), style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600))),
       ),

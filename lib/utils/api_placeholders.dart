@@ -1,4 +1,10 @@
 class ApiPlaceholders {
+  static Future<String> getAIResponse(String prompt) async {
+    await Future.delayed(Duration(seconds: 2));
+
+    return 'AI Response Placeholder: This is where the OpenAI API response would appear. The prompt was: "$prompt"';
+  }
+
   static Future<Map<String, dynamic>> generateAIWorkoutSuggestion({
     required String userLevel,
     required String goal,

@@ -48,7 +48,7 @@ class _WorkoutsScreenState extends State<WorkoutsScreen> {
                       GradientButton(
                         text: AppLocalizations.get('suggest_workout', locale),
                         onPressed: _showAISuggestion,
-                        colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)],
+                        colors: [Color(0xFFFF6B6B), Color(0xFFFF9F43)],
                       ),
                       SizedBox(height: 20),
                       _buildCategoryChips(),
@@ -75,7 +75,7 @@ class _WorkoutsScreenState extends State<WorkoutsScreen> {
               margin: EdgeInsets.only(right: 12),
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               decoration: BoxDecoration(
-                gradient: isSelected ? LinearGradient(colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)]) : null,
+                gradient: isSelected ? LinearGradient(colors: [Color(0xFFFF6B6B), Color(0xFFFF9F43)]) : null,
                 color: isSelected ? null : Colors.grey.shade200,
                 borderRadius: BorderRadius.circular(20),
               ),
@@ -179,10 +179,10 @@ class _WorkoutsScreenState extends State<WorkoutsScreen> {
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 decoration: BoxDecoration(
-                  color: Color(0xFFFFB4C8).withValues(alpha: 0.2),
+                  color: Color(0xFFFF6B6B).withValues(alpha: 0.2),
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child: Text(exercise.difficulty, style: TextStyle(color: Color(0xFFFFB4C8), fontWeight: FontWeight.w600)),
+                child: Text(exercise.difficulty, style: TextStyle(color: Color(0xFFFF6B6B), fontWeight: FontWeight.w600)),
               ),
               SizedBox(height: 24),
               Text('Description', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
@@ -192,7 +192,7 @@ class _WorkoutsScreenState extends State<WorkoutsScreen> {
               GradientButton(
                 text: 'Log Workout',
                 onPressed: () => Navigator.pop(context),
-                colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)],
+                colors: [Color(0xFFFF6B6B), Color(0xFFFF9F43)],
               ),
             ],
           ),
