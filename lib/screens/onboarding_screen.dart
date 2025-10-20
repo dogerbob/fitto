@@ -81,7 +81,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 end: Alignment.bottomRight,
               ),
               borderRadius: BorderRadius.circular(100),
-              boxShadow: [BoxShadow(color: _pages[index]['gradient'][0].withValues(alpha: 0.3), blurRadius: 20, offset: Offset(0, 10))],
+              boxShadow: [BoxShadow(color: _pages[index]['gradient'][0].withOpacity(0.3), blurRadius: 20, offset: Offset(0, 10))],
             ),
             child: Icon(_pages[index]['icon'], size: 80, color: Colors.white),
           ),
@@ -124,7 +124,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         decoration: BoxDecoration(
           gradient: LinearGradient(colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)]),
           borderRadius: BorderRadius.circular(28),
-          boxShadow: [BoxShadow(color: Color(0xFFFFB4C8).withValues(alpha: 0.4), blurRadius: 12, offset: Offset(0, 6))],
+          boxShadow: [BoxShadow(color: Color(0xFFFFB4C8).withOpacity(0.4), blurRadius: 12, offset: Offset(0, 6))],
         ),
         child: Center(child: Text('Next', style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600))),
       ),
@@ -140,7 +140,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         decoration: BoxDecoration(
           gradient: LinearGradient(colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)]),
           borderRadius: BorderRadius.circular(28),
-          boxShadow: [BoxShadow(color: Color(0xFFFFB4C8).withValues(alpha: 0.4), blurRadius: 12, offset: Offset(0, 6))],
+          boxShadow: [BoxShadow(color: Color(0xFFFFB4C8).withOpacity(0.4), blurRadius: 12, offset: Offset(0, 6))],
         ),
         child: Center(child: Text(AppLocalizations.get('start', 'en'), style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600))),
       ),

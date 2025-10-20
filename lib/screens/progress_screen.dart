@@ -126,7 +126,7 @@ class _ProgressScreenState extends State<ProgressScreen> with SingleTickerProvid
             ),
             child: Column(
               children: [
-                Text('Current Weight', style: TextStyle(color: Colors.white.withValues(alpha: 0.9), fontSize: 14)),
+                Text('Current Weight', style: TextStyle(color: Colors.white.withOpacity(0.9), fontSize: 14)),
                 SizedBox(height: 8),
                 Text('${entries.last.value} kg', style: TextStyle(color: Colors.white, fontSize: 36, fontWeight: FontWeight.bold)),
               ],
@@ -156,7 +156,7 @@ class _ProgressScreenState extends State<ProgressScreen> with SingleTickerProvid
                     dotData: FlDotData(show: true),
                     belowBarData: BarAreaData(
                       show: true,
-                      color: Color(0xFFFFB4C8).withValues(alpha: 0.2),
+                      color: Color(0xFFFFB4C8).withOpacity(0.2),
                     ),
                   ),
                 ],
@@ -188,7 +188,7 @@ class _ProgressScreenState extends State<ProgressScreen> with SingleTickerProvid
             ),
             child: Column(
               children: [
-                Text('Today\'s Water', style: TextStyle(color: Colors.white.withValues(alpha: 0.9), fontSize: 14)),
+                Text('Today\'s Water', style: TextStyle(color: Colors.white.withOpacity(0.9), fontSize: 14)),
                 SizedBox(height: 8),
                 Text('${entries.last.value.toInt()} glasses', style: TextStyle(color: Colors.white, fontSize: 36, fontWeight: FontWeight.bold)),
               ],
@@ -249,7 +249,7 @@ class _ProgressScreenState extends State<ProgressScreen> with SingleTickerProvid
             ),
             child: Column(
               children: [
-                Text('Today\'s Steps', style: TextStyle(color: Colors.white.withValues(alpha: 0.9), fontSize: 14)),
+                Text('Today\'s Steps', style: TextStyle(color: Colors.white.withOpacity(0.9), fontSize: 14)),
                 SizedBox(height: 8),
                 Text('${entries.last.value.toInt()}', style: TextStyle(color: Colors.white, fontSize: 36, fontWeight: FontWeight.bold)),
               ],
@@ -279,7 +279,7 @@ class _ProgressScreenState extends State<ProgressScreen> with SingleTickerProvid
                     dotData: FlDotData(show: true),
                     belowBarData: BarAreaData(
                       show: true,
-                      color: Color(0xFFE8C5E5).withValues(alpha: 0.2),
+                      color: Color(0xFFE8C5E5).withOpacity(0.2),
                     ),
                   ),
                 ],

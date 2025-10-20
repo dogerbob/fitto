@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:fitto/screens/workouts_screen.dart';
 import 'package:fitto/screens/nutrition_screen.dart';
+import 'package:fitto/screens/water_tracker_screen.dart';
 import 'package:fitto/screens/progress_screen.dart';
 import 'package:fitto/screens/coach_screen.dart';
 import 'package:fitto/screens/settings_screen.dart';
-import 'package:fitto/services/auth_service.dart';
-import 'package:fitto/services/nutrition_service.dart';
-import 'package:fitto/services/progress_service.dart';
-import 'package:fitto/services/coach_service.dart';
+import 'package:fitto/providers/app_state_provider.dart';
 import 'package:fitto/widgets/stat_card.dart';
 import 'package:fitto/widgets/progress_ring.dart';
+import 'package:fitto/widgets/shimmer_loading.dart';
 import 'package:fitto/utils/localizations.dart';
+import 'package:fitto/utils/responsive_helper.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -21,53 +22,61 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
-  final AuthService _authService = AuthService();
-  final NutritionService _nutritionService = NutritionService();
-  final ProgressService _progressService = ProgressService();
-  final CoachService _coachService = CoachService();
-  bool _isLoading = true;
 
   @override
   void initState() {
     super.initState();
-    _initialize();
-  }
-
-  Future<void> _initialize() async {
-    await Future.wait([
-      _authService.initialize(),
-      _nutritionService.initialize(),
-      _progressService.initialize(),
-      _coachService.initialize(),
-    ]);
-    if (mounted) setState(() => _isLoading = false);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      context.read<AppStateProvider>().initialize();
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    final screens = [
-      _buildHomeContent(),
-      WorkoutsScreen(),
-      NutritionScreen(),
-      ProgressScreen(),
-      CoachScreen(),
-    ];
+    return Consumer<AppStateProvider>(
+      builder: (context, appState, child) {
+        final screens = [
+          _buildHomeContent(appState),
+          WorkoutsScreen(),
+          NutritionScreen(),
+          WaterTrackerScreen(),
+          ProgressScreen(),
+          CoachScreen(),
+        ];
 
-    return Scaffold(
-      body: _isLoading
-          ? Center(child: CircularProgressIndicator())
-          : AnimatedSwitcher(
-              duration: Duration(milliseconds: 350),
-              switchInCurve: Curves.easeOutCubic,
-              switchOutCurve: Curves.easeInCubic,
+        return Scaffold(
+          body: appState.isLoading
+              ? _buildShimmerLoading()
+              : AnimatedSwitcher(
+              duration: Duration(milliseconds: 400),
+              switchInCurve: Curves.easeInOutCubic,
+              switchOutCurve: Curves.easeInOutCubic,
               transitionBuilder: (child, animation) {
-                final offsetAnimation = Tween<Offset>(
-                  begin: Offset(0.05, 0),
+                final slideAnimation = Tween<Offset>(
+                  begin: Offset(0.1, 0),
                   end: Offset.zero,
-                ).animate(animation);
-                return FadeTransition(
-                  opacity: animation,
-                  child: SlideTransition(position: offsetAnimation, child: child),
+                ).animate(CurvedAnimation(
+                  parent: animation,
+                  curve: Curves.easeInOutCubic,
+                ));
+                
+                final scaleAnimation = Tween<double>(
+                  begin: 0.95,
+                  end: 1.0,
+                ).animate(CurvedAnimation(
+                  parent: animation,
+                  curve: Curves.easeInOutCubic,
+                ));
+                
+                return SlideTransition(
+                  position: slideAnimation,
+                  child: ScaleTransition(
+                    scale: scaleAnimation,
+                    child: FadeTransition(
+                      opacity: animation,
+                      child: child,
+                    ),
+                  ),
                 );
               },
               child: KeyedSubtree(
@@ -75,17 +84,101 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: screens[_currentIndex],
               ),
             ),
-      bottomNavigationBar: _buildBottomNav(),
+          bottomNavigationBar: _buildBottomNav(),
+        );
+      },
     );
   }
 
-  Widget _buildHomeContent() {
+  Widget _buildShimmerLoading() {
+    return SafeArea(
+      child: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Header shimmer
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      ShimmerLoading(
+                        isLoading: true,
+                        child: ShimmerText(width: 60, height: 16),
+                      ),
+                      SizedBox(height: 8),
+                      ShimmerLoading(
+                        isLoading: true,
+                        child: ShimmerText(width: 120, height: 28),
+                      ),
+                    ],
+                  ),
+                  ShimmerLoading(
+                    isLoading: true,
+                    child: ShimmerCircle(size: 48),
+                  ),
+                ],
+              ),
+              SizedBox(height: 32),
+              
+              // Motivation card shimmer
+              ShimmerLoading(
+                isLoading: true,
+                child: ShimmerCard(height: 100, borderRadius: 20),
+              ),
+              SizedBox(height: 32),
+              
+              // Title shimmer
+              ShimmerLoading(
+                isLoading: true,
+                child: ShimmerText(width: 150, height: 22),
+              ),
+              SizedBox(height: 16),
+              
+              // Progress ring shimmer
+              Center(
+                child: ShimmerLoading(
+                  isLoading: true,
+                  child: ShimmerCircle(size: 160),
+                ),
+              ),
+              SizedBox(height: 32),
+              
+              // Stats grid shimmer
+              Row(
+                children: [
+                  Expanded(
+                    child: ShimmerLoading(
+                      isLoading: true,
+                      child: ShimmerCard(height: 80, borderRadius: 12),
+                    ),
+                  ),
+                  SizedBox(width: 16),
+                  Expanded(
+                    child: ShimmerLoading(
+                      isLoading: true,
+                      child: ShimmerCard(height: 80, borderRadius: 12),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildHomeContent(AppStateProvider appState) {
     final locale = 'en';
-    final user = _authService.currentUser;
-    final todayCalories = _nutritionService.getTotalCaloriesByDate(DateTime.now());
-    final waterEntry = _progressService.getLatestEntryByType('water');
-    final stepsEntry = _progressService.getLatestEntryByType('steps');
-    final motivation = _coachService.getDailyMotivation();
+    final user = appState.currentUser;
+    final todayCalories = appState.getTotalCaloriesByDate(DateTime.now());
+    final waterGlasses = appState.waterGlasses;
+    final steps = appState.steps;
+    final motivation = appState.dailyMotivation;
 
     return SafeArea(
       child: SingleChildScrollView(
@@ -120,7 +213,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 decoration: BoxDecoration(
                   gradient: LinearGradient(colors: [Color(0xFFFFEAA7), Color(0xFFFFD97D)]),
                   borderRadius: BorderRadius.circular(20),
-                  boxShadow: [BoxShadow(color: Color(0xFFFFEAA7).withValues(alpha: 0.3), blurRadius: 12, offset: Offset(0, 6))],
+                  boxShadow: [BoxShadow(color: Color(0xFFFFEAA7).withOpacity(0.3), blurRadius: 12, offset: Offset(0, 6))],
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -157,35 +250,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               SizedBox(height: 32),
-              LayoutBuilder(
-                builder: (context, constraints) {
-                  final isWide = constraints.maxWidth > 520;
-                  final crossAxis = isWide ? 3 : 2;
-                  return GridView.count(
-                crossAxisCount: crossAxis,
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                mainAxisSpacing: 16,
-                crossAxisSpacing: 16,
-                childAspectRatio: isWide ? 1.4 : 1.3,
-                children: [
-                  StatCard(
-                    title: AppLocalizations.get('water', locale),
-                    value: '${waterEntry?.value.toInt() ?? 0}',
-                    subtitle: '${user?.dailyWaterGoal ?? 8} glasses goal',
-                    icon: Icons.water_drop,
-                    gradientColors: [Color(0xFFA8D8EA), Color(0xFF7FBFD4)],
-                  ),
-                  StatCard(
-                    title: AppLocalizations.get('steps', locale),
-                    value: '${stepsEntry?.value.toInt() ?? 0}',
-                    subtitle: '${user?.dailyStepsGoal ?? 10000} steps goal',
-                    icon: Icons.directions_walk,
-                    gradientColors: [Color(0xFFE8C5E5), Color(0xFFD4A5D1)],
-                  ),
-                ],
-              );
-                },
+              ResponsiveHelper.responsiveBuilder(
+                context,
+                mobile: _buildStatsGrid(context, 2, 1.3),
+                tablet: _buildStatsGrid(context, 3, 1.4),
+                desktop: _buildStatsGrid(context, 4, 1.5),
               ),
             ],
           ),
@@ -201,7 +270,7 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Container(
         decoration: BoxDecoration(
           color: Theme.of(context).scaffoldBackgroundColor,
-          boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.06), blurRadius: 12, offset: Offset(0, -2))],
+          boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 12, offset: Offset(0, -2))],
         ),
         child: SafeArea(
           child: Padding(
@@ -212,8 +281,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 _buildNavItem(Icons.home, AppLocalizations.get('home', locale), 0),
                 _buildNavItem(Icons.fitness_center, AppLocalizations.get('workouts', locale), 1),
                 _buildNavItem(Icons.restaurant, AppLocalizations.get('nutrition', locale), 2),
-                _buildNavItem(Icons.trending_up, AppLocalizations.get('progress', locale), 3),
-                _buildNavItem(Icons.psychology, AppLocalizations.get('coach', locale), 4),
+                _buildNavItem(Icons.water_drop, 'Water', 3),
+                _buildNavItem(Icons.trending_up, AppLocalizations.get('progress', locale), 4),
+                _buildNavItem(Icons.psychology, AppLocalizations.get('coach', locale), 5),
               ],
             ),
           ),
@@ -222,28 +292,129 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  Widget _buildStatsGrid(BuildContext context, int crossAxisCount, double childAspectRatio) {
+    final locale = 'en';
+    final user = context.read<AppStateProvider>().currentUser;
+    final waterGlasses = context.read<AppStateProvider>().waterGlasses;
+    final steps = context.read<AppStateProvider>().steps;
+
+    return GridView.count(
+      crossAxisCount: crossAxisCount,
+      shrinkWrap: true,
+      physics: NeverScrollableScrollPhysics(),
+      mainAxisSpacing: 16,
+      crossAxisSpacing: 16,
+      childAspectRatio: childAspectRatio,
+      children: [
+        StatCard(
+          title: AppLocalizations.get('water', locale),
+          value: '$waterGlasses',
+          subtitle: '${user?.dailyWaterGoal ?? 8} glasses goal',
+          icon: Icons.water_drop,
+          gradientColors: [
+            Theme.of(context).colorScheme.secondary,
+            Theme.of(context).colorScheme.tertiary,
+          ],
+        ),
+        StatCard(
+          title: AppLocalizations.get('steps', locale),
+          value: '$steps',
+          subtitle: '${user?.dailyStepsGoal ?? 10000} steps goal',
+          icon: Icons.directions_walk,
+          gradientColors: [
+            Theme.of(context).colorScheme.tertiary,
+            Theme.of(context).colorScheme.primary,
+          ],
+        ),
+        if (crossAxisCount >= 3)
+          StatCard(
+            title: 'Calories',
+            value: '${context.read<AppStateProvider>().getTotalCaloriesByDate(DateTime.now())}',
+            subtitle: '${user?.dailyCalorieGoal ?? 2200} kcal goal',
+            icon: Icons.local_fire_department,
+            gradientColors: [
+              Theme.of(context).colorScheme.primary,
+              Theme.of(context).colorScheme.secondary,
+            ],
+          ),
+        if (crossAxisCount >= 4)
+          StatCard(
+            title: 'Workouts',
+            value: '3',
+            subtitle: 'This week',
+            icon: Icons.fitness_center,
+            gradientColors: [
+              Theme.of(context).colorScheme.tertiary,
+              Theme.of(context).colorScheme.primary,
+            ],
+          ),
+      ],
+    );
+  }
+
   Widget _buildNavItem(IconData icon, String label, int index) {
     final isActive = _currentIndex == index;
     return GestureDetector(
-      onTap: () => setState(() => _currentIndex = index),
+      onTap: () {
+        if (_currentIndex != index) {
+          setState(() => _currentIndex = index);
+        }
+      },
       child: AnimatedContainer(
-        duration: Duration(milliseconds: 250),
-        padding: EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+        duration: Duration(milliseconds: 300),
+        curve: Curves.easeInOutCubic,
+        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         decoration: BoxDecoration(
-          gradient: isActive ? LinearGradient(colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)]) : null,
+          gradient: isActive 
+              ? LinearGradient(
+                  colors: [
+                    Theme.of(context).colorScheme.primary,
+                    Theme.of(context).colorScheme.secondary,
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ) 
+              : null,
           color: isActive ? null : Colors.transparent,
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: isActive
+              ? [
+                  BoxShadow(
+                    color: Theme.of(context).colorScheme.primary.withOpacity(0.3),
+                    blurRadius: 12,
+                    offset: Offset(0, 4),
+                  ),
+                ]
+              : null,
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(icon, color: isActive ? Colors.white : Colors.grey.shade500, size: 24),
-            AnimatedSize(
+            AnimatedScale(
+              scale: isActive ? 1.1 : 1.0,
               duration: Duration(milliseconds: 200),
+              child: Icon(
+                icon,
+                color: isActive 
+                    ? Colors.white 
+                    : Colors.grey.shade500,
+                size: 24,
+              ),
+            ),
+            AnimatedSize(
+              duration: Duration(milliseconds: 250),
+              curve: Curves.easeInOutCubic,
               child: isActive
                   ? Padding(
-                      padding: EdgeInsets.only(top: 4),
-                      child: Text(label, style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.w600)),
+                      padding: EdgeInsets.only(top: 6),
+                      child: Text(
+                        label,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 10,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
                     )
                   : SizedBox.shrink(),
             ),

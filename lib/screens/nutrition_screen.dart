@@ -5,6 +5,8 @@ import 'package:fitto/models/nutrition_entry.dart';
 import 'package:fitto/utils/constants.dart';
 import 'package:fitto/utils/localizations.dart';
 import 'package:fitto/widgets/gradient_button.dart';
+import 'package:fitto/widgets/add_meal_dialog.dart';
+import 'package:fitto/utils/responsive_helper.dart';
 
 class NutritionScreen extends StatefulWidget {
   const NutritionScreen({super.key});
@@ -54,19 +56,19 @@ class _NutritionScreenState extends State<NutritionScreen> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)]),
                         borderRadius: BorderRadius.circular(20),
-                        boxShadow: [BoxShadow(color: Color(0xFFFFB4C8).withValues(alpha: 0.3), blurRadius: 12, offset: Offset(0, 6))],
+                        boxShadow: [BoxShadow(color: Color(0xFFFFB4C8).withOpacity(0.3), blurRadius: 12, offset: Offset(0, 6))],
                       ),
                       child: Column(
                         children: [
-                          Text(AppLocalizations.get('calories', locale), style: TextStyle(color: Colors.white.withValues(alpha: 0.9), fontSize: 14, fontWeight: FontWeight.w600)),
+                          Text(AppLocalizations.get('calories', locale), style: TextStyle(color: Colors.white.withOpacity(0.9), fontSize: 14, fontWeight: FontWeight.w600)),
                           SizedBox(height: 8),
                           Text('$todayCalories', style: TextStyle(color: Colors.white, fontSize: 48, fontWeight: FontWeight.bold)),
-                          Text('of $goal kcal', style: TextStyle(color: Colors.white.withValues(alpha: 0.9), fontSize: 16)),
+                          Text('of $goal kcal', style: TextStyle(color: Colors.white.withOpacity(0.9), fontSize: 16)),
                           SizedBox(height: 16),
                           Container(
                             height: 8,
                             decoration: BoxDecoration(
-                              color: Colors.white.withValues(alpha: 0.3),
+                              color: Colors.white.withOpacity(0.3),
                               borderRadius: BorderRadius.circular(4),
                             ),
                             child: FractionallySizedBox(
@@ -84,14 +86,11 @@ class _NutritionScreenState extends State<NutritionScreen> {
                       ),
                     ),
                     SizedBox(height: 24),
-                    Row(
-                      children: [
-                        Expanded(child: _buildMacroCard(AppLocalizations.get('protein', locale), '${macros['protein']?.toInt() ?? 0}g', Color(0xFFA8D8EA))),
-                        SizedBox(width: 12),
-                        Expanded(child: _buildMacroCard(AppLocalizations.get('carbs', locale), '${macros['carbs']?.toInt() ?? 0}g', Color(0xFFE8C5E5))),
-                        SizedBox(width: 12),
-                        Expanded(child: _buildMacroCard(AppLocalizations.get('fats', locale), '${macros['fats']?.toInt() ?? 0}g', Color(0xFFFFEAA7))),
-                      ],
+                    ResponsiveHelper.responsiveBuilder(
+                      context,
+                      mobile: _buildMacrosRow(context, macros, locale, 1),
+                      tablet: _buildMacrosRow(context, macros, locale, 2),
+                      desktop: _buildMacrosRow(context, macros, locale, 3),
                     ),
                     SizedBox(height: 24),
                     Row(
@@ -112,7 +111,7 @@ class _NutritionScreenState extends State<NutritionScreen> {
                           decoration: BoxDecoration(
                             gradient: LinearGradient(colors: [Color(0xFFA8D8EA), Color(0xFF7FBFD4)]),
                             borderRadius: BorderRadius.circular(24),
-                            boxShadow: [BoxShadow(color: Color(0xFFA8D8EA).withValues(alpha: 0.3), blurRadius: 8, offset: Offset(0, 4))],
+                            boxShadow: [BoxShadow(color: Color(0xFFA8D8EA).withOpacity(0.3), blurRadius: 8, offset: Offset(0, 4))],
                           ),
                           child: IconButton(icon: Icon(Icons.camera_alt, color: Colors.white), onPressed: _showAIFoodScan),
                         ),
@@ -128,18 +127,41 @@ class _NutritionScreenState extends State<NutritionScreen> {
     );
   }
 
+  Widget _buildMacrosRow(BuildContext context, Map<String, double> macros, String locale, int itemsPerRow) {
+    final macroData = [
+      {'label': AppLocalizations.get('protein', locale), 'value': '${macros['protein']?.toInt() ?? 0}g', 'color': Theme.of(context).colorScheme.secondary},
+      {'label': AppLocalizations.get('carbs', locale), 'value': '${macros['carbs']?.toInt() ?? 0}g', 'color': Theme.of(context).colorScheme.tertiary},
+      {'label': AppLocalizations.get('fats', locale), 'value': '${macros['fats']?.toInt() ?? 0}g', 'color': Theme.of(context).colorScheme.primary},
+    ];
+
+    return Wrap(
+      spacing: 12,
+      runSpacing: 12,
+      children: macroData.take(itemsPerRow).map((macro) {
+        return Expanded(
+          child: _buildMacroCard(
+            macro['label'] as String,
+            macro['value'] as String,
+            macro['color'] as Color,
+          ),
+        );
+      }).toList(),
+    );
+  }
+
   Widget _buildMacroCard(String label, String value, Color color) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 12),
+      padding: EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: color.withValues(alpha: 0.15),
-        borderRadius: BorderRadius.circular(12),
+        color: color.withOpacity(0.1),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: color.withOpacity(0.3)),
       ),
       child: Column(
         children: [
-          Text(value, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: color)),
+          Text(value, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: color)),
           SizedBox(height: 4),
-          Text(label, style: TextStyle(fontSize: 12, color: Colors.grey.shade600)),
+          Text(label, style: TextStyle(fontSize: 12, color: Colors.grey.shade600, fontWeight: FontWeight.w500)),
         ],
       ),
     );
@@ -177,7 +199,7 @@ class _NutritionScreenState extends State<NutritionScreen> {
       decoration: BoxDecoration(
         color: Theme.of(context).brightness == Brightness.dark ? Color(0xFF2A2A2A) : Colors.white,
         borderRadius: BorderRadius.circular(12),
-        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 8, offset: Offset(0, 2))],
+        boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 8, offset: Offset(0, 2))],
       ),
       child: Row(
         children: [
@@ -207,13 +229,12 @@ class _NutritionScreenState extends State<NutritionScreen> {
   void _showAddMealDialog() {
     showDialog(
       context: context,
-      builder: (context) => AlertDialog(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        title: Text('Add Meal', style: TextStyle(fontWeight: FontWeight.bold)),
-        content: Text('Manual meal logging feature\n\nThis would allow users to input:\n• Meal name\n• Serving size\n• Calories\n• Macros (P/C/F)'),
-        actions: [
-          TextButton(onPressed: () => Navigator.pop(context), child: Text('Close')),
-        ],
+      builder: (context) => AddMealDialog(
+        onMealAdded: (meal) async {
+          await _nutritionService.addEntry(meal);
+          setState(() {});
+          Navigator.pop(context);
+        },
       ),
     );
   }

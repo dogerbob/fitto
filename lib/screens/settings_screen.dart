@@ -101,13 +101,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   decoration: BoxDecoration(
                     gradient: LinearGradient(colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)]),
                     borderRadius: BorderRadius.circular(20),
-                    boxShadow: [BoxShadow(color: Color(0xFFFFB4C8).withValues(alpha: 0.3), blurRadius: 12, offset: Offset(0, 6))],
+                    boxShadow: [BoxShadow(color: Color(0xFFFFB4C8).withOpacity(0.3), blurRadius: 12, offset: Offset(0, 6))],
                   ),
                   child: Row(
                     children: [
                       CircleAvatar(
                         radius: 32,
-                        backgroundColor: Colors.white.withValues(alpha: 0.3),
+                        backgroundColor: Colors.white.withOpacity(0.3),
                         child: Icon(Icons.person, color: Colors.white, size: 32),
                       ),
                       SizedBox(width: 16),
@@ -116,7 +116,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(user?.name ?? 'User', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
-                            Text(user?.email ?? '', style: TextStyle(color: Colors.white.withValues(alpha: 0.9), fontSize: 14)),
+                            Text(user?.email ?? '', style: TextStyle(color: Colors.white.withOpacity(0.9), fontSize: 14)),
                           ],
                         ),
                       ),
@@ -124,7 +124,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         Container(
                           padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                           decoration: BoxDecoration(
-                            color: Colors.white.withValues(alpha: 0.3),
+                            color: Colors.white.withOpacity(0.3),
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Text('Free', style: TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.w600)),
@@ -192,7 +192,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       decoration: BoxDecoration(
         color: Theme.of(context).brightness == Brightness.dark ? Color(0xFF2A2A2A) : Colors.white,
         borderRadius: BorderRadius.circular(12),
-        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 8, offset: Offset(0, 2))],
+        boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 8, offset: Offset(0, 2))],
       ),
       child: ListTile(
         leading: Icon(icon, color: Color(0xFFFFB4C8)),
@@ -210,7 +210,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       decoration: BoxDecoration(
         color: Theme.of(context).brightness == Brightness.dark ? Color(0xFF2A2A2A) : Colors.white,
         borderRadius: BorderRadius.circular(12),
-        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 8, offset: Offset(0, 2))],
+        boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 8, offset: Offset(0, 2))],
       ),
       child: ListTile(
         leading: Icon(Icons.language, color: Color(0xFFFFB4C8)),
@@ -234,7 +234,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       decoration: BoxDecoration(
         color: Theme.of(context).brightness == Brightness.dark ? Color(0xFF2A2A2A) : Colors.white,
         borderRadius: BorderRadius.circular(12),
-        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 8, offset: Offset(0, 2))],
+        boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 8, offset: Offset(0, 2))],
       ),
       child: ListTile(
         leading: Icon(Icons.palette, color: Color(0xFFFFB4C8)),
@@ -259,7 +259,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       decoration: BoxDecoration(
         color: Theme.of(context).brightness == Brightness.dark ? Color(0xFF2A2A2A) : Colors.white,
         borderRadius: BorderRadius.circular(12),
-        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 8, offset: Offset(0, 2))],
+        boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 8, offset: Offset(0, 2))],
       ),
       child: SwitchListTile(
         secondary: Icon(Icons.notifications, color: Color(0xFFFFB4C8)),
@@ -289,7 +289,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       decoration: BoxDecoration(
         color: Theme.of(context).brightness == Brightness.dark ? Color(0xFF2A2A2A) : Colors.white,
         borderRadius: BorderRadius.circular(12),
-        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 8, offset: Offset(0, 2))],
+        boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 8, offset: Offset(0, 2))],
       ),
       child: Column(
         children: [
@@ -331,7 +331,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       decoration: BoxDecoration(
         color: Theme.of(context).brightness == Brightness.dark ? Color(0xFF2A2A2A) : Colors.white,
         borderRadius: BorderRadius.circular(12),
-        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 8, offset: Offset(0, 2))],
+        boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 8, offset: Offset(0, 2))],
       ),
       child: Column(
         children: [

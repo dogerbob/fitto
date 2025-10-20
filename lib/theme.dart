@@ -2,45 +2,51 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LightModeColors {
-  static const lightPrimary = Color(0xFFFFB4C8);
-  static const lightOnPrimary = Color(0xFF2D2D2D);
-  static const lightPrimaryContainer = Color(0xFFFFE4ED);
-  static const lightOnPrimaryContainer = Color(0xFF4A4A4A);
-  static const lightSecondary = Color(0xFFA8D8EA);
-  static const lightOnSecondary = Color(0xFF2D2D2D);
-  static const lightTertiary = Color(0xFFE8C5E5);
+  // Warm, energetic coral and orange palette
+  static const lightPrimary = Color(0xFFFF6B6B); // Coral red
+  static const lightOnPrimary = Color(0xFFFFFFFF);
+  static const lightPrimaryContainer = Color(0xFFFFE5E5); // Soft coral background
+  static const lightOnPrimaryContainer = Color(0xFF8B0000); // Dark red text
+  static const lightSecondary = Color(0xFFFF8C42); // Vibrant orange
+  static const lightOnSecondary = Color(0xFFFFFFFF);
+  static const lightTertiary = Color(0xFFFFD93D); // Golden amber
   static const lightOnTertiary = Color(0xFF2D2D2D);
-  static const lightError = Color(0xFFFF6B9D);
+  static const lightError = Color(0xFFE74C3C); // Bright red
   static const lightOnError = Color(0xFFFFFFFF);
-  static const lightErrorContainer = Color(0xFFFFDAE5);
-  static const lightOnErrorContainer = Color(0xFF5D1F3C);
-  static const lightInversePrimary = Color(0xFFE8C5E5);
+  static const lightErrorContainer = Color(0xFFFFE5E5);
+  static const lightOnErrorContainer = Color(0xFF8B0000);
+  static const lightInversePrimary = Color(0xFFFF8C42);
   static const lightShadow = Color(0x1A000000);
   static const lightSurface = Color(0xFFFFFBFE);
   static const lightOnSurface = Color(0xFF2D2D2D);
   static const lightAppBarBackground = Color(0xFFFFFBFE);
-  static const accent = Color(0xFFFFEAA7);
+  static const accent = Color(0xFFFFD93D); // Golden accent
+  static const lightSurfaceVariant = Color(0xFFFFF5F5); // Very light coral
+  static const lightOutline = Color(0xFFFFB4C8); // Soft coral outline
 }
 
 class DarkModeColors {
-  static const darkPrimary = Color(0xFFFF9BB5);
-  static const darkOnPrimary = Color(0xFFF5F5F5);
-  static const darkPrimaryContainer = Color(0xFF8B4A5E);
-  static const darkOnPrimaryContainer = Color(0xFFFFE4ED);
-  static const darkSecondary = Color(0xFF7FBFD4);
-  static const darkOnSecondary = Color(0xFFF5F5F5);
-  static const darkTertiary = Color(0xFFD4A5D1);
-  static const darkOnTertiary = Color(0xFFF5F5F5);
-  static const darkError = Color(0xFFFF85A3);
-  static const darkOnError = Color(0xFF3A0A1B);
-  static const darkErrorContainer = Color(0xFF85263D);
-  static const darkOnErrorContainer = Color(0xFFFFDAE5);
-  static const darkInversePrimary = Color(0xFFFFB4C8);
+  // Warm dark mode with coral and orange accents
+  static const darkPrimary = Color(0xFFFF6B6B); // Same coral for consistency
+  static const darkOnPrimary = Color(0xFF000000);
+  static const darkPrimaryContainer = Color(0xFF8B0000); // Dark red container
+  static const darkOnPrimaryContainer = Color(0xFFFFE5E5);
+  static const darkSecondary = Color(0xFFFF8C42); // Vibrant orange
+  static const darkOnSecondary = Color(0xFF000000);
+  static const darkTertiary = Color(0xFFFFD93D); // Golden amber
+  static const darkOnTertiary = Color(0xFF000000);
+  static const darkError = Color(0xFFFF6B6B);
+  static const darkOnError = Color(0xFF000000);
+  static const darkErrorContainer = Color(0xFF8B0000);
+  static const darkOnErrorContainer = Color(0xFFFFE5E5);
+  static const darkInversePrimary = Color(0xFFFF8C42);
   static const darkShadow = Color(0x33000000);
   static const darkSurface = Color(0xFF1A1A1A);
   static const darkOnSurface = Color(0xFFE8E8E8);
   static const darkAppBarBackground = Color(0xFF1A1A1A);
-  static const accent = Color(0xFFFFD97D);
+  static const accent = Color(0xFFFFD93D); // Golden accent
+  static const darkSurfaceVariant = Color(0xFF2A1A1A); // Dark coral background
+  static const darkOutline = Color(0xFFFF6B6B); // Coral outline
 }
 
 class FontSizes {
@@ -80,12 +86,54 @@ ThemeData get lightTheme => ThemeData(
     shadow: LightModeColors.lightShadow,
     surface: LightModeColors.lightSurface,
     onSurface: LightModeColors.lightOnSurface,
+    surfaceContainerHighest: LightModeColors.lightSurfaceVariant,
+    outline: LightModeColors.lightOutline,
   ),
   brightness: Brightness.light,
   appBarTheme: AppBarTheme(
     backgroundColor: LightModeColors.lightAppBarBackground,
     foregroundColor: LightModeColors.lightOnPrimaryContainer,
     elevation: 0,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(bottom: Radius.circular(20)),
+    ),
+  ),
+  cardTheme: CardTheme(
+    elevation: 8,
+    shadowColor: LightModeColors.lightPrimary.withOpacity(0.2),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+  ),
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+      elevation: 8,
+      shadowColor: LightModeColors.lightPrimary.withOpacity(0.3),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+    ),
+  ),
+  filledButtonTheme: FilledButtonThemeData(
+    style: FilledButton.styleFrom(
+      elevation: 8,
+      shadowColor: LightModeColors.lightPrimary.withOpacity(0.3),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+    ),
+  ),
+  inputDecorationTheme: InputDecorationTheme(
+    border: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(16),
+      borderSide: BorderSide(color: LightModeColors.lightOutline),
+    ),
+    enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(16),
+      borderSide: BorderSide(color: LightModeColors.lightOutline.withOpacity(0.5)),
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(16),
+      borderSide: BorderSide(color: LightModeColors.lightPrimary, width: 2),
+    ),
+    filled: true,
+    fillColor: LightModeColors.lightSurfaceVariant,
   ),
   textTheme: TextTheme(
     displayLarge: GoogleFonts.inter(
@@ -170,12 +218,54 @@ ThemeData get darkTheme => ThemeData(
     shadow: DarkModeColors.darkShadow,
     surface: DarkModeColors.darkSurface,
     onSurface: DarkModeColors.darkOnSurface,
+    surfaceContainerHighest: DarkModeColors.darkSurfaceVariant,
+    outline: DarkModeColors.darkOutline,
   ),
   brightness: Brightness.dark,
   appBarTheme: AppBarTheme(
     backgroundColor: DarkModeColors.darkAppBarBackground,
     foregroundColor: DarkModeColors.darkOnPrimaryContainer,
     elevation: 0,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(bottom: Radius.circular(20)),
+    ),
+  ),
+  cardTheme: CardTheme(
+    elevation: 8,
+    shadowColor: DarkModeColors.darkPrimary.withOpacity(0.3),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+  ),
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+      elevation: 8,
+      shadowColor: DarkModeColors.darkPrimary.withOpacity(0.4),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+    ),
+  ),
+  filledButtonTheme: FilledButtonThemeData(
+    style: FilledButton.styleFrom(
+      elevation: 8,
+      shadowColor: DarkModeColors.darkPrimary.withOpacity(0.4),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+    ),
+  ),
+  inputDecorationTheme: InputDecorationTheme(
+    border: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(16),
+      borderSide: BorderSide(color: DarkModeColors.darkOutline),
+    ),
+    enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(16),
+      borderSide: BorderSide(color: DarkModeColors.darkOutline.withOpacity(0.5)),
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(16),
+      borderSide: BorderSide(color: DarkModeColors.darkPrimary, width: 2),
+    ),
+    filled: true,
+    fillColor: DarkModeColors.darkSurfaceVariant,
   ),
   textTheme: TextTheme(
     displayLarge: GoogleFonts.inter(

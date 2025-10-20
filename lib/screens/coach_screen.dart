@@ -77,7 +77,7 @@ class _CoachScreenState extends State<CoachScreen> {
       decoration: BoxDecoration(
         gradient: LinearGradient(colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)]),
         borderRadius: BorderRadius.vertical(bottom: Radius.circular(24)),
-        boxShadow: [BoxShadow(color: Color(0xFFFFB4C8).withValues(alpha: 0.3), blurRadius: 12, offset: Offset(0, 6))],
+        boxShadow: [BoxShadow(color: Color(0xFFFFB4C8).withOpacity(0.3), blurRadius: 12, offset: Offset(0, 6))],
       ),
       child: Column(
         children: [
@@ -87,7 +87,7 @@ class _CoachScreenState extends State<CoachScreen> {
                 width: 50,
                 height: 50,
                 decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.3),
+                  color: Colors.white.withOpacity(0.3),
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: Icon(Icons.psychology, color: Colors.white, size: 28),
@@ -98,7 +98,7 @@ class _CoachScreenState extends State<CoachScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(AppLocalizations.get('coach', locale), style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold)),
-                    Text('Your AI Fitness Assistant', style: TextStyle(color: Colors.white.withValues(alpha: 0.9), fontSize: 14)),
+                    Text('Your AI Fitness Assistant', style: TextStyle(color: Colors.white.withOpacity(0.9), fontSize: 14)),
                   ],
                 ),
               ),
@@ -140,7 +140,7 @@ class _CoachScreenState extends State<CoachScreen> {
       padding: EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: Theme.of(context).scaffoldBackgroundColor,
-        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 10, offset: Offset(0, -2))],
+        boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 10, offset: Offset(0, -2))],
       ),
       child: SafeArea(
         child: Row(
@@ -170,7 +170,7 @@ class _CoachScreenState extends State<CoachScreen> {
               decoration: BoxDecoration(
                 gradient: LinearGradient(colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)]),
                 borderRadius: BorderRadius.circular(24),
-                boxShadow: [BoxShadow(color: Color(0xFFFFB4C8).withValues(alpha: 0.3), blurRadius: 8, offset: Offset(0, 4))],
+                boxShadow: [BoxShadow(color: Color(0xFFFFB4C8).withOpacity(0.3), blurRadius: 8, offset: Offset(0, 4))],
               ),
               child: _isSending
                 ? Center(child: SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2)))

@@ -111,7 +111,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
           SizedBox(height: 16),
           Text('Unlock Premium', style: TextStyle(color: Colors.white, fontSize: 32, fontWeight: FontWeight.bold)),
           SizedBox(height: 8),
-          Text('Get unlimited access to all features', style: TextStyle(color: Colors.white.withValues(alpha: 0.9), fontSize: 16)),
+          Text('Get unlimited access to all features', style: TextStyle(color: Colors.white.withOpacity(0.9), fontSize: 16)),
         ],
       ),
     );
@@ -136,7 +136,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
           decoration: BoxDecoration(
             color: Theme.of(context).brightness == Brightness.dark ? Color(0xFF2A2A2A) : Color(0xFFFFFBFE),
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: Color(0xFFFFB4C8).withValues(alpha: 0.2)),
+            border: Border.all(color: Color(0xFFFFB4C8).withOpacity(0.2)),
           ),
           child: Row(
             children: [
@@ -183,7 +183,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
             color: isSelected ? Colors.transparent : (plan.isPopular ? Color(0xFFFFB4C8) : Colors.grey.shade300),
             width: 2,
           ),
-          boxShadow: isSelected ? [BoxShadow(color: Color(0xFFFFB4C8).withValues(alpha: 0.3), blurRadius: 12, offset: Offset(0, 6))] : null,
+          boxShadow: isSelected ? [BoxShadow(color: Color(0xFFFFB4C8).withOpacity(0.3), blurRadius: 12, offset: Offset(0, 6))] : null,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -205,7 +205,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
                     Text(
                       plan.duration,
                       style: TextStyle(
-                        color: isSelected ? Colors.white.withValues(alpha: 0.9) : Colors.grey.shade600,
+                        color: isSelected ? Colors.white.withOpacity(0.9) : Colors.grey.shade600,
                         fontSize: 14,
                       ),
                     ),
@@ -226,7 +226,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
                       Container(
                         padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                         decoration: BoxDecoration(
-                          color: isSelected ? Colors.white.withValues(alpha: 0.3) : Color(0xFFFFEAA7),
+                          color: isSelected ? Colors.white.withOpacity(0.3) : Color(0xFFFFEAA7),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Text('POPULAR', style: TextStyle(color: isSelected ? Colors.white : Colors.orange.shade800, fontSize: 10, fontWeight: FontWeight.bold)),
@@ -242,7 +242,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
                 children: [
                   Icon(Icons.check_circle, color: isSelected ? Colors.white : Color(0xFFFFB4C8), size: 20),
                   SizedBox(width: 8),
-                  Text(feature, style: TextStyle(color: isSelected ? Colors.white.withValues(alpha: 0.9) : Colors.grey.shade700, fontSize: 14)),
+                  Text(feature, style: TextStyle(color: isSelected ? Colors.white.withOpacity(0.9) : Colors.grey.shade700, fontSize: 14)),
                 ],
               ),
             )),
