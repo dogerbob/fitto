@@ -58,7 +58,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 Spacer(),
                 Text(AppLocalizations.get('welcome', locale), style: TextStyle(color: Colors.white, fontSize: 36, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
                 SizedBox(height: 16),
-                Text('Track your fitness journey with AI-powered insights', style: TextStyle(color: Colors.white.withValues(alpha: 0.9), fontSize: 16), textAlign: TextAlign.center),
+                Text('Track your fitness journey with AI-powered insights', style: TextStyle(color: Colors.white.withOpacity( 0.9), fontSize: 16), textAlign: TextAlign.center),
                 Spacer(),
                 if (_isLoading)
                   CircularProgressIndicator(color: Colors.white)
@@ -93,7 +93,7 @@ class _AuthScreenState extends State<AuthScreen> {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(28),
-          boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.15), blurRadius: 12, offset: Offset(0, 6))],
+          boxShadow: [BoxShadow(color: Colors.black.withOpacity( 0.15), blurRadius: 12, offset: Offset(0, 6))],
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

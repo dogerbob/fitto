@@ -25,22 +25,22 @@ class AppConstants {
 
   static List<LinearGradient> gradients = [
     LinearGradient(
-      colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)],
+      colors: [Color(0xFFFF8A65), Color(0xFFFFAB91)], // Soft orange to warm coral
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
     ),
     LinearGradient(
-      colors: [Color(0xFFA8D8EA), Color(0xFF7FBFD4)],
+      colors: [Color(0xFFFFAB91), Color(0xFFFFCC80)], // Warm coral to soft cream
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
     ),
     LinearGradient(
-      colors: [Color(0xFFE8C5E5), Color(0xFFD4A5D1)],
+      colors: [Color(0xFFFFCC80), Color(0xFFFFD54F)], // Soft cream to warm yellow
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
     ),
     LinearGradient(
-      colors: [Color(0xFFFFEAA7), Color(0xFFFFD97D)],
+      colors: [Color(0xFFFFD54F), Color(0xFFFF8A65)], // Warm yellow to soft orange
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
     ),

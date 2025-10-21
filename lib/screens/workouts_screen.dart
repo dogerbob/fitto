@@ -112,7 +112,7 @@ class _WorkoutsScreenState extends State<WorkoutsScreen> {
       decoration: BoxDecoration(
         gradient: LinearGradient(colors: gradient.colors, begin: Alignment.topLeft, end: Alignment.bottomRight),
         borderRadius: BorderRadius.circular(16),
-        boxShadow: [BoxShadow(color: gradient.colors.first.withValues(alpha: 0.25), blurRadius: 10, offset: Offset(0, 4))],
+        boxShadow: [BoxShadow(color: gradient.colors.first.withOpacity( 0.25), blurRadius: 10, offset: Offset(0, 4))],
       ),
       child: Material(
         color: Colors.transparent,
@@ -127,7 +127,7 @@ class _WorkoutsScreenState extends State<WorkoutsScreen> {
                   width: 60,
                   height: 60,
                   decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.3),
+                    color: Colors.white.withOpacity( 0.3),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Icon(Icons.fitness_center, color: Colors.white, size: 28),
@@ -139,7 +139,7 @@ class _WorkoutsScreenState extends State<WorkoutsScreen> {
                     children: [
                       Text(exercise.name, style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
                       SizedBox(height: 4),
-                      Text('${exercise.muscleGroup} · ${exercise.difficulty}', style: TextStyle(color: Colors.white.withValues(alpha: 0.9), fontSize: 14)),
+                      Text('${exercise.muscleGroup} · ${exercise.difficulty}', style: TextStyle(color: Colors.white.withOpacity( 0.9), fontSize: 14)),
                     ],
                   ),
                 ),
@@ -179,7 +179,7 @@ class _WorkoutsScreenState extends State<WorkoutsScreen> {
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 decoration: BoxDecoration(
-                  color: Color(0xFFFFB4C8).withValues(alpha: 0.2),
+                  color: Color(0xFFFFB4C8).withOpacity( 0.2),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Text(exercise.difficulty, style: TextStyle(color: Color(0xFFFFB4C8), fontWeight: FontWeight.w600)),

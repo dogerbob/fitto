@@ -26,7 +26,7 @@ class GradientButton extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(colors: colors, begin: Alignment.topLeft, end: Alignment.bottomRight),
         borderRadius: BorderRadius.circular(borderRadius),
-        boxShadow: [BoxShadow(color: colors.first.withValues(alpha: 0.3), blurRadius: 12, offset: Offset(0, 6))],
+        boxShadow: [BoxShadow(color: colors.first.withOpacity( 0.3), blurRadius: 12, offset: Offset(0, 6))],
       ),
       child: Material(
         color: Colors.transparent,

@@ -8,6 +8,7 @@ import 'package:fitto/services/auth_service.dart';
 import 'package:fitto/services/nutrition_service.dart';
 import 'package:fitto/services/progress_service.dart';
 import 'package:fitto/services/coach_service.dart';
+import 'package:fitto/services/water_service.dart';
 import 'package:fitto/widgets/stat_card.dart';
 import 'package:fitto/widgets/progress_ring.dart';
 import 'package:fitto/utils/localizations.dart';
@@ -25,6 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final NutritionService _nutritionService = NutritionService();
   final ProgressService _progressService = ProgressService();
   final CoachService _coachService = CoachService();
+  final WaterService _waterService = WaterService();
   bool _isLoading = true;
 
   @override
@@ -39,6 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
       _nutritionService.initialize(),
       _progressService.initialize(),
       _coachService.initialize(),
+      _waterService.initialize(),
     ]);
     if (mounted) setState(() => _isLoading = false);
   }
@@ -83,7 +86,8 @@ class _HomeScreenState extends State<HomeScreen> {
     final locale = 'en';
     final user = _authService.currentUser;
     final todayCalories = _nutritionService.getTotalCaloriesByDate(DateTime.now());
-    final waterEntry = _progressService.getLatestEntryByType('water');
+    final waterIntake = _waterService.getTodayIntake();
+    final waterGoal = _waterService.dailyGoal;
     final stepsEntry = _progressService.getLatestEntryByType('steps');
     final motivation = _coachService.getDailyMotivation();
 
@@ -118,9 +122,9 @@ class _HomeScreenState extends State<HomeScreen> {
               Container(
                 padding: EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  gradient: LinearGradient(colors: [Color(0xFFFFEAA7), Color(0xFFFFD97D)]),
+                  gradient: LinearGradient(colors: [Color(0xFFFFD54F), Color(0xFFFFCC80)]),
                   borderRadius: BorderRadius.circular(20),
-                  boxShadow: [BoxShadow(color: Color(0xFFFFEAA7).withValues(alpha: 0.3), blurRadius: 12, offset: Offset(0, 6))],
+                  boxShadow: [BoxShadow(color: Color(0xFFFFD54F).withOpacity( 0.3), blurRadius: 12, offset: Offset(0, 6))],
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -145,8 +149,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   progress: todayCalories / (user?.dailyCalorieGoal ?? 2200),
                   size: 160,
                   strokeWidth: 16,
-                  color: Color(0xFFFFB4C8),
-                  backgroundColor: Color(0xFFFFE4ED),
+                  color: Color(0xFFFF8A65),
+                  backgroundColor: Color(0xFFFFE0D6),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -171,8 +175,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   StatCard(
                     title: AppLocalizations.get('water', locale),
-                    value: '${waterEntry?.value.toInt() ?? 0}',
-                    subtitle: '${user?.dailyWaterGoal ?? 8} glasses goal',
+                    value: '$waterIntake',
+                    subtitle: '$waterGoal glasses goal',
                     icon: Icons.water_drop,
                     gradientColors: [Color(0xFFA8D8EA), Color(0xFF7FBFD4)],
                   ),
@@ -181,7 +185,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     value: '${stepsEntry?.value.toInt() ?? 0}',
                     subtitle: '${user?.dailyStepsGoal ?? 10000} steps goal',
                     icon: Icons.directions_walk,
-                    gradientColors: [Color(0xFFE8C5E5), Color(0xFFD4A5D1)],
+                    gradientColors: [Color(0xFFFFAB91), Color(0xFFFFCC80)],
                   ),
                 ],
               );
@@ -201,7 +205,7 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Container(
         decoration: BoxDecoration(
           color: Theme.of(context).scaffoldBackgroundColor,
-          boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.06), blurRadius: 12, offset: Offset(0, -2))],
+          boxShadow: [BoxShadow(color: Colors.black.withOpacity( 0.06), blurRadius: 12, offset: Offset(0, -2))],
         ),
         child: SafeArea(
           child: Padding(
@@ -230,7 +234,7 @@ class _HomeScreenState extends State<HomeScreen> {
         duration: Duration(milliseconds: 250),
         padding: EdgeInsets.symmetric(horizontal: 14, vertical: 10),
         decoration: BoxDecoration(
-          gradient: isActive ? LinearGradient(colors: [Color(0xFFFFB4C8), Color(0xFFE8C5E5)]) : null,
+          gradient: isActive ? LinearGradient(colors: [Color(0xFFFF8A65), Color(0xFFFFAB91)]) : null,
           color: isActive ? null : Colors.transparent,
           borderRadius: BorderRadius.circular(16),
         ),
