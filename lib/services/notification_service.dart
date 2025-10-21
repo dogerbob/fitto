@@ -44,10 +44,10 @@ class NotificationService {
   Future<void> requestPermissions() async {
     if (kIsWeb) return; // Web: no-op here
     if (Platform.isAndroid) {
-      final details = await _plugin.resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>();
+      final details = _plugin.resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>();
       await details?.requestNotificationsPermission();
     } else if (Platform.isIOS) {
-      final details = await _plugin.resolvePlatformSpecificImplementation<IOSFlutterLocalNotificationsPlugin>();
+      final details = _plugin.resolvePlatformSpecificImplementation<IOSFlutterLocalNotificationsPlugin>();
       await details?.requestPermissions(alert: true, badge: true, sound: true);
     }
   }

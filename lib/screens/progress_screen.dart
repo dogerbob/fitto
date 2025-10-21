@@ -313,7 +313,11 @@ class _ProgressScreenState extends State<ProgressScreen> with SingleTickerProvid
       if (byteData == null) return;
       final Uint8List bytes = byteData.buffer.asUint8List();
       final xfile = XFile.fromData(bytes, mimeType: 'image/png', name: 'fitto_progress.png');
-      await Share.shareXFiles([xfile], text: 'My progress with Fitto');
+      await SharePlus.instance.share(ShareParams(
+        text: 'My progress with Fitto',
+        subject: 'Fitto Progress',
+        files: [xfile],
+      ));
     } catch (e) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Unable to share right now')));

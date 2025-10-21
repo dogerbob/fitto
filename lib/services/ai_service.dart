@@ -1,15 +1,13 @@
-import 'dart:convert';
-import 'dart:io';
-import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
 import 'package:fitto/models/nutrition_entry.dart';
 
 /// AI Service for handling meal recognition, suggestions, and nutrition analysis
 class AIService {
-  static const String _openaiApiKey = 'your-openai-api-key'; // Replace with actual API key
-  static const String _openaiBaseUrl = 'https://api.openai.com/v1';
+  // Note: In production, these would be used for actual API calls
+  // static const String _openaiApiKey = 'your-openai-api-key';
+  // static const String _openaiBaseUrl = 'https://api.openai.com/v1';
   
-  final ImagePicker _imagePicker = ImagePicker();
+  // final ImagePicker _imagePicker = ImagePicker();
 
   /// Recognize food items from an image using AI
   Future<List<NutritionEntry>> recognizeFoodFromImage(XFile image) async {
@@ -22,7 +20,8 @@ class AIService {
       // For now, return mock data based on common food recognition
       return _getMockFoodRecognition(image.name);
     } catch (e) {
-      print('Error recognizing food: $e');
+      // In production, use proper logging instead of print
+      // // print('Error recognizing food: $e');
       return [];
     }
   }
@@ -39,7 +38,7 @@ class AIService {
       // For now, return intelligent mock suggestions
       return _getMockMealSuggestions(calorieGoal, mealType, dietaryRestrictions, cuisinePreference);
     } catch (e) {
-      print('Error getting meal suggestions: $e');
+      // print('Error getting meal suggestions: $e');
       return [];
     }
   }
@@ -51,7 +50,7 @@ class AIService {
       // For now, return mock data based on common food text patterns
       return _getMockTextRecognition(text);
     } catch (e) {
-      print('Error recognizing food from text: $e');
+      // print('Error recognizing food from text: $e');
       return [];
     }
   }
@@ -66,7 +65,7 @@ class AIService {
       // Analyze recent nutrition data and provide insights
       return _analyzeNutritionData(recentEntries, calorieGoal, macroGoals);
     } catch (e) {
-      print('Error getting nutrition insights: $e');
+      // print('Error getting nutrition insights: $e');
       return {};
     }
   }
@@ -81,7 +80,7 @@ class AIService {
     try {
       return _getMockWorkoutSuggestions(caloriesConsumed, calorieGoal, fitnessLevel, availableEquipment);
     } catch (e) {
-      print('Error getting workout suggestions: $e');
+      // print('Error getting workout suggestions: $e');
       return [];
     }
   }
@@ -97,7 +96,7 @@ class AIService {
     try {
       return _generatePersonalizedMotivation(caloriesConsumed, calorieGoal, waterIntake, waterGoal, userMood);
     } catch (e) {
-      print('Error generating motivation: $e');
+      // print('Error generating motivation: $e');
       return "Keep up the great work! Every small step counts towards your goals.";
     }
   }
@@ -240,7 +239,6 @@ class AIService {
   }
 
   List<NutritionEntry> _getMockTextRecognition(String text) {
-    final now = DateTime.now();
     final textLower = text.toLowerCase();
     
     if (textLower.contains('apple')) {

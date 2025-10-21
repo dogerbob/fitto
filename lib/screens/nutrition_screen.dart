@@ -20,7 +20,7 @@ class _NutritionScreenState extends State<NutritionScreen> with TickerProviderSt
   final NutritionService _nutritionService = NutritionService();
   final AuthService _authService = AuthService();
   final WaterService _waterService = WaterService();
-  DateTime _selectedDate = DateTime.now();
+  final DateTime _selectedDate = DateTime.now();
   bool _isLoading = true;
   bool _isAILoading = false;
   late AnimationController _animationController;
@@ -685,13 +685,15 @@ class _NutritionScreenState extends State<NutritionScreen> with TickerProviderSt
 
   Future<void> _addMealFromSuggestion(Map<String, dynamic> suggestion) async {
     await _nutritionService.addMealFromSuggestion(suggestion, 'Breakfast');
-    setState(() {});
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text('Meal added to your log!'),
-        backgroundColor: Color(0xFFFF8A65),
-      ),
-    );
+    if (mounted) {
+      setState(() {});
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Meal added to your log!'),
+          backgroundColor: Color(0xFFFF8A65),
+        ),
+      );
+    }
   }
 
   Future<void> _showAISuggestions() async {
@@ -825,30 +827,34 @@ class _NutritionScreenState extends State<NutritionScreen> with TickerProviderSt
   void _showAIFoodScan() async {
     try {
       final recognizedFoods = await _nutritionService.recognizeFoodFromImage();
-      if (recognizedFoods.isNotEmpty) {
-        setState(() {});
-        _loadNutritionInsights();
+      if (mounted) {
+        if (recognizedFoods.isNotEmpty) {
+          setState(() {});
+          _loadNutritionInsights();
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('${recognizedFoods.length} food item(s) recognized and added!'),
+              backgroundColor: Color(0xFFFF8A65),
+            ),
+          );
+        } else {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('No food items recognized. Please try again.'),
+              backgroundColor: Colors.orange,
+            ),
+          );
+        }
+      }
+    } catch (e) {
+      if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('${recognizedFoods.length} food item(s) recognized and added!'),
-            backgroundColor: Color(0xFFFF8A65),
-          ),
-        );
-      } else {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('No food items recognized. Please try again.'),
-            backgroundColor: Colors.orange,
+            content: Text('Error recognizing food. Please try again.'),
+            backgroundColor: Colors.red,
           ),
         );
       }
-    } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('Error recognizing food. Please try again.'),
-          backgroundColor: Colors.red,
-        ),
-      );
     }
   }
 }

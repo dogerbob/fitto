@@ -84,7 +84,7 @@ class NutritionService {
       }
       return [];
     } catch (e) {
-      print('Error recognizing food from image: $e');
+      // print('Error recognizing food from image: $e');
       return [];
     }
   }
@@ -98,7 +98,7 @@ class NutritionService {
       }
       return recognizedFoods;
     } catch (e) {
-      print('Error recognizing food from text: $e');
+      // print('Error recognizing food from text: $e');
       return [];
     }
   }
@@ -118,7 +118,7 @@ class NutritionService {
         cuisinePreference: cuisinePreference,
       );
     } catch (e) {
-      print('Error getting meal suggestions: $e');
+      // print('Error getting meal suggestions: $e');
       return [];
     }
   }
@@ -136,7 +136,7 @@ class NutritionService {
         macroGoals: macroGoals,
       );
     } catch (e) {
-      print('Error getting nutrition insights: $e');
+      // print('Error getting nutrition insights: $e');
       return {};
     }
   }
@@ -161,7 +161,7 @@ class NutritionService {
       );
       await addEntry(entry);
     } catch (e) {
-      print('Error adding meal from suggestion: $e');
+      // print('Error adding meal from suggestion: $e');
     }
   }
 

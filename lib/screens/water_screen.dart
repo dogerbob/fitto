@@ -378,7 +378,7 @@ class _WaterScreenState extends State<WaterScreen> with TickerProviderStateMixin
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
         SizedBox(height: 16),
-        Container(
+        SizedBox(
           height: 200,
           child: LineChart(
             LineChartData(
@@ -602,14 +602,16 @@ class _WaterScreenState extends State<WaterScreen> with TickerProviderStateMixin
 
   Future<void> _addWater(int amount) async {
     await _waterService.addWaterIntake(amount: amount);
-    setState(() {});
-    
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text('Added $amount oz of water!'),
-        backgroundColor: Color(0xFFA8D8EA),
-      ),
-    );
+    if (mounted) {
+      setState(() {});
+      
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Added $amount oz of water!'),
+          backgroundColor: Color(0xFFA8D8EA),
+        ),
+      );
+    }
   }
 
   Future<void> _deleteWaterEntry(String id) async {

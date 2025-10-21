@@ -5,7 +5,7 @@ import 'package:fitto/models/nutrition_entry.dart';
 class AddMealDialog extends StatefulWidget {
   final VoidCallback onMealAdded;
 
-  const AddMealDialog({required this.onMealAdded});
+  const AddMealDialog({super.key, required this.onMealAdded});
 
   @override
   State<AddMealDialog> createState() => _AddMealDialogState();

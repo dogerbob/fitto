@@ -219,18 +219,20 @@ class _WorkoutsScreenState extends State<WorkoutsScreen> {
     );
 
     Future.delayed(Duration(seconds: 2), () {
-      Navigator.pop(context);
-      showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          title: Text('Suggested Workout', style: TextStyle(fontWeight: FontWeight.bold)),
-          content: Text('Based on your profile, try:\n\n• Push-ups (3x15)\n• Squats (4x12)\n• Plank (3x45s)\n\nEstimated duration: 30 minutes'),
-          actions: [
-            TextButton(onPressed: () => Navigator.pop(context), child: Text('Close')),
-          ],
-        ),
-      );
+      if (mounted) {
+        Navigator.pop(context);
+        showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            title: Text('Suggested Workout', style: TextStyle(fontWeight: FontWeight.bold)),
+            content: Text('Based on your profile, try:\n\n• Push-ups (3x15)\n• Squats (4x12)\n• Plank (3x45s)\n\nEstimated duration: 30 minutes'),
+            actions: [
+              TextButton(onPressed: () => Navigator.pop(context), child: Text('Close')),
+            ],
+          ),
+        );
+      }
     });
   }
 }
