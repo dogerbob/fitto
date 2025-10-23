@@ -1,5 +1,5 @@
-name: wger
-description: Self hosted workout, nutrition and weight manager.
+name: fitto
+description: Your personal fitness companion - workout, nutrition and wellness tracker.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.

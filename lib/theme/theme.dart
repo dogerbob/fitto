@@ -1,35 +1,24 @@
 /*
- * This file is part of wger Workout Manager <https://github.com/wger-project>.
- * Copyright (C) 2020, 2021 wger Team
- *
- * wger Workout Manager is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Affero General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * wger Workout Manager is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Affero General Public License for more details.
- *
- * You should have received a copy of the GNU Affero General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * Fitto - Your Personal Fitness Companion
+ * Copyright (C) 2025 Deepen Black
+ * All rights reserved.
  */
 
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-// Color scheme, please consult
-// * https://pub.dev/packages/flex_color_scheme
-// * https://rydmike.com/flexseedscheme/demo-v1/#/
+// Fitto Color Scheme - Warm, energetic colors for motivation
+// Primary: Warm Orange - Energy and vitality
+// Secondary: Coral Red - Passion and determination
+// Tertiary: Golden Yellow - Success and achievement
 
-const Color wgerPrimaryColor = Color(0xff2a4c7d);
-const Color wgerPrimaryButtonColor = Color(0xff266dd3);
-const Color wgerPrimaryColorLight = Color(0xff94B2DB);
-const Color wgerSecondaryColor = Color(0xffe63946);
-const Color wgerSecondaryColorLight = Color(0xffF6B4BA);
-const Color wgerTertiaryColor = Color(0xFF6CA450);
+const Color wgerPrimaryColor = Color(0xffF57C00); // Warm Orange
+const Color wgerPrimaryButtonColor = Color(0xffFF6F00); // Vibrant Orange
+const Color wgerPrimaryColorLight = Color(0xffFFB74D); // Light Orange
+const Color wgerSecondaryColor = Color(0xffFF5722); // Coral Red
+const Color wgerSecondaryColorLight = Color(0xffFF8A65); // Light Coral
+const Color wgerTertiaryColor = Color(0xffFFC107); // Golden Yellow
 
 const FlexSubThemesData wgerSubThemeData = FlexSubThemesData(
   fabSchemeColor: SchemeColor.secondary,
@@ -39,6 +28,13 @@ const FlexSubThemesData wgerSubThemeData = FlexSubThemesData(
   appBarScrolledUnderElevation: 4,
   navigationBarIndicatorOpacity: 0.24,
   navigationBarHeight: 56,
+  // Rounded corners for modern, friendly UI
+  defaultRadius: 16.0,
+  cardRadius: 20.0,
+  dialogRadius: 24.0,
+  fabRadius: 28.0,
+  chipRadius: 16.0,
+  buttonRadius: 16.0,
 );
 
 const String wgerDisplayFont = 'RobotoCondensed';

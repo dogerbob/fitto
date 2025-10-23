@@ -1,4 +1,4 @@
-package de.wger.flutter
+package com.deepenblack.fitto
 
 import io.flutter.embedding.android.FlutterActivity
 
