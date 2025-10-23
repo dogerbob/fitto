@@ -17,7 +17,7 @@
  */
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:wger/models/workouts/set_config_data.dart';
+import 'package:fitto/models/workouts/set_config_data.dart';
 
 part 'slot_data.g.dart';
 

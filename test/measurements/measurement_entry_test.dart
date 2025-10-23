@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:wger/models/measurements/measurement_entry.dart';
+import 'package:fitto/models/measurements/measurement_entry.dart';
 
 void main() {
   final MeasurementEntry tMeasurementEntry = MeasurementEntry(

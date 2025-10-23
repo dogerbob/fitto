@@ -17,9 +17,9 @@
  */
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:wger/models/exercises/exercise.dart';
-import 'package:wger/models/workouts/log.dart';
-import 'package:wger/models/workouts/session.dart';
+import 'package:fitto/models/exercises/exercise.dart';
+import 'package:fitto/models/workouts/log.dart';
+import 'package:fitto/models/workouts/session.dart';
 
 part 'session_api.g.dart';
 

@@ -17,10 +17,10 @@
  */
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:wger/helpers/json.dart';
-import 'package:wger/models/nutrition/ingredient.dart';
-import 'package:wger/models/nutrition/ingredient_weight_unit.dart';
-import 'package:wger/models/nutrition/nutritional_values.dart';
+import 'package:fitto/helpers/json.dart';
+import 'package:fitto/models/nutrition/ingredient.dart';
+import 'package:fitto/models/nutrition/ingredient_weight_unit.dart';
+import 'package:fitto/models/nutrition/nutritional_values.dart';
 
 part 'meal_item.g.dart';
 

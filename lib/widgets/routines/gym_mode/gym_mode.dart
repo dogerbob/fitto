@@ -21,16 +21,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:logging/logging.dart';
 import 'package:provider/provider.dart' as provider;
-import 'package:wger/models/exercises/exercise.dart';
-import 'package:wger/models/workouts/day_data.dart';
-import 'package:wger/providers/exercises.dart';
-import 'package:wger/providers/gym_state.dart';
-import 'package:wger/providers/routines.dart';
-import 'package:wger/widgets/routines/gym_mode/exercise_overview.dart';
-import 'package:wger/widgets/routines/gym_mode/log_page.dart';
-import 'package:wger/widgets/routines/gym_mode/session_page.dart';
-import 'package:wger/widgets/routines/gym_mode/start_page.dart';
-import 'package:wger/widgets/routines/gym_mode/timer.dart';
+import 'package:fitto/models/exercises/exercise.dart';
+import 'package:fitto/models/workouts/day_data.dart';
+import 'package:fitto/providers/exercises.dart';
+import 'package:fitto/providers/gym_state.dart';
+import 'package:fitto/providers/routines.dart';
+import 'package:fitto/widgets/routines/gym_mode/exercise_overview.dart';
+import 'package:fitto/widgets/routines/gym_mode/log_page.dart';
+import 'package:fitto/widgets/routines/gym_mode/session_page.dart';
+import 'package:fitto/widgets/routines/gym_mode/start_page.dart';
+import 'package:fitto/widgets/routines/gym_mode/timer.dart';
 
 class GymMode extends ConsumerStatefulWidget {
   final DayData _dayDataGym;

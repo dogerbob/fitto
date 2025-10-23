@@ -17,10 +17,10 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/workouts/routine.dart';
-import 'package:wger/screens/routine_edit_screen.dart';
-import 'package:wger/widgets/routines/day.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/workouts/routine.dart';
+import 'package:fitto/screens/routine_edit_screen.dart';
+import 'package:fitto/widgets/routines/day.dart';
 
 class RoutineDetail extends StatelessWidget {
   final Routine _routine;

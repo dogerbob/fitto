@@ -18,12 +18,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
-import 'package:wger/exceptions/http_exception.dart';
-import 'package:wger/exceptions/no_such_entry_exception.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/models/measurements/measurement_category.dart';
-import 'package:wger/models/measurements/measurement_entry.dart';
-import 'package:wger/providers/base_provider.dart';
+import 'package:fitto/exceptions/http_exception.dart';
+import 'package:fitto/exceptions/no_such_entry_exception.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/models/measurements/measurement_category.dart';
+import 'package:fitto/models/measurements/measurement_entry.dart';
+import 'package:fitto/providers/base_provider.dart';
 
 class MeasurementProvider with ChangeNotifier {
   final _logger = Logger('MeasurementProvider');

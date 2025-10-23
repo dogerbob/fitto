@@ -1,11 +1,11 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:wger/core/validators.dart';
-import 'package:wger/helpers/exercises/validators.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/exercises/exercise_submission_images.dart';
-import 'package:wger/widgets/add_exercise/license_info_widget.dart';
+import 'package:fitto/core/validators.dart';
+import 'package:fitto/helpers/exercises/validators.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/exercises/exercise_submission_images.dart';
+import 'package:fitto/widgets/add_exercise/license_info_widget.dart';
 
 import 'add_exercise_text_area.dart';
 

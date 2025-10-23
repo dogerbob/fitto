@@ -23,15 +23,15 @@ import 'package:flutter_zxing/flutter_zxing.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:logging/logging.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/helpers/misc.dart';
-import 'package:wger/helpers/platform.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/nutrition/ingredient.dart';
-import 'package:wger/providers/nutrition.dart';
-import 'package:wger/widgets/core/core.dart';
-import 'package:wger/widgets/nutrition/helpers.dart';
-import 'package:wger/widgets/nutrition/ingredient_dialogs.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/helpers/misc.dart';
+import 'package:fitto/helpers/platform.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/nutrition/ingredient.dart';
+import 'package:fitto/providers/nutrition.dart';
+import 'package:fitto/widgets/core/core.dart';
+import 'package:fitto/widgets/nutrition/helpers.dart';
+import 'package:fitto/widgets/nutrition/ingredient_dialogs.dart';
 
 class ScanReader extends StatelessWidget {
   const ScanReader();

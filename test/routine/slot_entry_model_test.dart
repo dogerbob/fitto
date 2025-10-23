@@ -19,8 +19,8 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:wger/models/workouts/base_config.dart';
-import 'package:wger/models/workouts/slot_entry.dart';
+import 'package:fitto/models/workouts/base_config.dart';
+import 'package:fitto/models/workouts/slot_entry.dart';
 
 import '../fixtures/fixture_reader.dart';
 

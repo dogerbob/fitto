@@ -23,16 +23,16 @@ import 'package:http/http.dart' as http;
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/database/exercises/exercise_database.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/workouts/routine.dart';
-import 'package:wger/providers/base_provider.dart';
-import 'package:wger/providers/exercises.dart';
-import 'package:wger/providers/routines.dart';
-import 'package:wger/screens/form_screen.dart';
-import 'package:wger/screens/routine_list_screen.dart';
-import 'package:wger/widgets/nutrition/forms.dart';
-import 'package:wger/widgets/routines/forms/routine.dart';
+import 'package:fitto/database/exercises/exercise_database.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/workouts/routine.dart';
+import 'package:fitto/providers/base_provider.dart';
+import 'package:fitto/providers/exercises.dart';
+import 'package:fitto/providers/routines.dart';
+import 'package:fitto/screens/form_screen.dart';
+import 'package:fitto/screens/routine_list_screen.dart';
+import 'package:fitto/widgets/nutrition/forms.dart';
+import 'package:fitto/widgets/routines/forms/routine.dart';
 
 import 'routines_screen_test.mocks.dart';
 

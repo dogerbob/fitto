@@ -18,13 +18,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/workouts/routine.dart';
-import 'package:wger/providers/routines.dart';
-import 'package:wger/screens/add_exercise_screen.dart';
-import 'package:wger/screens/exercises_screen.dart';
-import 'package:wger/screens/routine_edit_screen.dart';
-import 'package:wger/screens/routine_logs_screen.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/workouts/routine.dart';
+import 'package:fitto/providers/routines.dart';
+import 'package:fitto/screens/add_exercise_screen.dart';
+import 'package:fitto/screens/exercises_screen.dart';
+import 'package:fitto/screens/routine_edit_screen.dart';
+import 'package:fitto/screens/routine_logs_screen.dart';
 
 enum _RoutineAppBarOptions {
   list,

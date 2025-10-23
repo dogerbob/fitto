@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart';
 import 'package:mockito/mockito.dart';
-import 'package:wger/providers/auth.dart';
+import 'package:fitto/providers/auth.dart';
 
 import '../other/base_provider_test.mocks.dart';
 

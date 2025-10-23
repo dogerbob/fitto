@@ -21,9 +21,9 @@ import 'dart:io';
 
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
-import 'package:wger/exceptions/http_exception.dart';
-import 'package:wger/providers/auth.dart';
-import 'package:wger/providers/helpers.dart';
+import 'package:fitto/exceptions/http_exception.dart';
+import 'package:fitto/providers/auth.dart';
+import 'package:fitto/providers/helpers.dart';
 
 /// Base provider class.
 ///

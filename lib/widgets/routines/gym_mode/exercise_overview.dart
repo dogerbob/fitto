@@ -16,9 +16,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 import 'package:flutter/material.dart';
-import 'package:wger/models/exercises/exercise.dart';
-import 'package:wger/widgets/exercises/exercises.dart';
-import 'package:wger/widgets/routines/gym_mode/navigation.dart';
+import 'package:fitto/models/exercises/exercise.dart';
+import 'package:fitto/widgets/exercises/exercises.dart';
+import 'package:fitto/widgets/routines/gym_mode/navigation.dart';
 
 class ExerciseOverview extends StatelessWidget {
   final PageController _controller;

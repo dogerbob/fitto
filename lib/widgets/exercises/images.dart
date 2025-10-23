@@ -18,9 +18,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/exercises/image.dart';
-import 'package:wger/widgets/core/image.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/exercises/image.dart';
+import 'package:fitto/widgets/core/image.dart';
 
 class ExerciseImageWidget extends StatelessWidget {
   ExerciseImageWidget({this.image, this.height});

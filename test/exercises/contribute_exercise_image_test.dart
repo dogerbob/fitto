@@ -2,9 +2,9 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
-import 'package:wger/models/exercises/exercise_submission_images.dart';
-import 'package:wger/providers/add_exercise.dart';
-import 'package:wger/providers/base_provider.dart';
+import 'package:fitto/models/exercises/exercise_submission_images.dart';
+import 'package:fitto/providers/add_exercise.dart';
+import 'package:fitto/providers/base_provider.dart';
 
 import 'contribute_exercise_image_test.mocks.dart';
 

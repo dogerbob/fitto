@@ -20,10 +20,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/helpers/shared_preferences.dart';
-import 'package:wger/models/user/profile.dart';
-import 'package:wger/providers/base_provider.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/helpers/shared_preferences.dart';
+import 'package:fitto/models/user/profile.dart';
+import 'package:fitto/providers/base_provider.dart';
 
 class UserProvider with ChangeNotifier {
   ThemeMode themeMode = ThemeMode.system;

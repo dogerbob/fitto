@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:wger/exceptions/no_such_entry_exception.dart';
-import 'package:wger/models/measurements/measurement_category.dart';
-import 'package:wger/models/measurements/measurement_entry.dart';
+import 'package:fitto/exceptions/no_such_entry_exception.dart';
+import 'package:fitto/models/measurements/measurement_category.dart';
+import 'package:fitto/models/measurements/measurement_entry.dart';
 
 void main() {
   final List<MeasurementEntry> tMeasurementEntries = [

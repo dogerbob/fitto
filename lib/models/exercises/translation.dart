@@ -18,10 +18,10 @@
 
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:wger/models/exercises/alias.dart';
-import 'package:wger/models/exercises/comment.dart';
-import 'package:wger/models/exercises/exercise.dart';
-import 'package:wger/models/exercises/language.dart';
+import 'package:fitto/models/exercises/alias.dart';
+import 'package:fitto/models/exercises/comment.dart';
+import 'package:fitto/models/exercises/exercise.dart';
+import 'package:fitto/models/exercises/language.dart';
 
 part 'translation.g.dart';
 

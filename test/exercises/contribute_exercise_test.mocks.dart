@@ -10,20 +10,20 @@ import 'package:flutter/material.dart' as _i18;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i13;
 import 'package:shared_preferences/shared_preferences.dart' as _i4;
-import 'package:wger/database/exercises/exercise_database.dart' as _i5;
-import 'package:wger/models/exercises/category.dart' as _i7;
-import 'package:wger/models/exercises/equipment.dart' as _i8;
-import 'package:wger/models/exercises/exercise.dart' as _i6;
-import 'package:wger/models/exercises/exercise_submission.dart' as _i14;
-import 'package:wger/models/exercises/exercise_submission_images.dart' as _i12;
-import 'package:wger/models/exercises/language.dart' as _i10;
-import 'package:wger/models/exercises/muscle.dart' as _i9;
-import 'package:wger/models/exercises/variation.dart' as _i3;
-import 'package:wger/models/user/profile.dart' as _i19;
-import 'package:wger/providers/add_exercise.dart' as _i11;
-import 'package:wger/providers/base_provider.dart' as _i2;
-import 'package:wger/providers/exercises.dart' as _i20;
-import 'package:wger/providers/user.dart' as _i17;
+import 'package:fitto/database/exercises/exercise_database.dart' as _i5;
+import 'package:fitto/models/exercises/category.dart' as _i7;
+import 'package:fitto/models/exercises/equipment.dart' as _i8;
+import 'package:fitto/models/exercises/exercise.dart' as _i6;
+import 'package:fitto/models/exercises/exercise_submission.dart' as _i14;
+import 'package:fitto/models/exercises/exercise_submission_images.dart' as _i12;
+import 'package:fitto/models/exercises/language.dart' as _i10;
+import 'package:fitto/models/exercises/muscle.dart' as _i9;
+import 'package:fitto/models/exercises/variation.dart' as _i3;
+import 'package:fitto/models/user/profile.dart' as _i19;
+import 'package:fitto/providers/add_exercise.dart' as _i11;
+import 'package:fitto/providers/base_provider.dart' as _i2;
+import 'package:fitto/providers/exercises.dart' as _i20;
+import 'package:fitto/providers/user.dart' as _i17;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values

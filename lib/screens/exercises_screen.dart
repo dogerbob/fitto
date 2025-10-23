@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/exercises/exercise.dart';
-import 'package:wger/providers/exercises.dart';
-import 'package:wger/widgets/core/app_bar.dart';
-import 'package:wger/widgets/exercises/filter_row.dart';
-import 'package:wger/widgets/exercises/list_tile.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/exercises/exercise.dart';
+import 'package:fitto/providers/exercises.dart';
+import 'package:fitto/widgets/core/app_bar.dart';
+import 'package:fitto/widgets/exercises/filter_row.dart';
+import 'package:fitto/widgets/exercises/list_tile.dart';
 
 class ExercisesScreen extends StatefulWidget {
   const ExercisesScreen({super.key});

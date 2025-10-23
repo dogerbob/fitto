@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/providers/add_exercise.dart';
-import 'package:wger/widgets/add_exercise/preview_images.dart';
-import 'package:wger/widgets/core/cards.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/providers/add_exercise.dart';
+import 'package:fitto/widgets/add_exercise/preview_images.dart';
+import 'package:fitto/widgets/core/cards.dart';
 
 class Step6Overview extends StatelessWidget {
   @override

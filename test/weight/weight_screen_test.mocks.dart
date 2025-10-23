@@ -9,17 +9,17 @@ import 'dart:ui' as _i12;
 import 'package:flutter/material.dart' as _i14;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:shared_preferences/shared_preferences.dart' as _i4;
-import 'package:wger/database/ingredients/ingredients_database.dart' as _i5;
-import 'package:wger/models/body_weight/weight_entry.dart' as _i3;
-import 'package:wger/models/nutrition/ingredient.dart' as _i9;
-import 'package:wger/models/nutrition/meal.dart' as _i7;
-import 'package:wger/models/nutrition/meal_item.dart' as _i8;
-import 'package:wger/models/nutrition/nutritional_plan.dart' as _i6;
-import 'package:wger/models/user/profile.dart' as _i15;
-import 'package:wger/providers/base_provider.dart' as _i2;
-import 'package:wger/providers/body_weight.dart' as _i10;
-import 'package:wger/providers/nutrition.dart' as _i16;
-import 'package:wger/providers/user.dart' as _i13;
+import 'package:fitto/database/ingredients/ingredients_database.dart' as _i5;
+import 'package:fitto/models/body_weight/weight_entry.dart' as _i3;
+import 'package:fitto/models/nutrition/ingredient.dart' as _i9;
+import 'package:fitto/models/nutrition/meal.dart' as _i7;
+import 'package:fitto/models/nutrition/meal_item.dart' as _i8;
+import 'package:fitto/models/nutrition/nutritional_plan.dart' as _i6;
+import 'package:fitto/models/user/profile.dart' as _i15;
+import 'package:fitto/providers/base_provider.dart' as _i2;
+import 'package:fitto/providers/body_weight.dart' as _i10;
+import 'package:fitto/providers/nutrition.dart' as _i16;
+import 'package:fitto/providers/user.dart' as _i13;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values

@@ -17,8 +17,8 @@
  */
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/helpers/gym_mode.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/helpers/gym_mode.dart';
 
 void main() {
   group('Test the plate calculator', () {

@@ -18,17 +18,17 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/exceptions/http_exception.dart';
-import 'package:wger/helpers/errors.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/workouts/day.dart';
-import 'package:wger/models/workouts/slot.dart';
-import 'package:wger/models/workouts/slot_entry.dart';
-import 'package:wger/providers/routines.dart';
-import 'package:wger/widgets/core/progress_indicator.dart';
-import 'package:wger/widgets/exercises/autocompleter.dart';
-import 'package:wger/widgets/routines/forms/slot_entry.dart';
-import 'package:wger/widgets/routines/slot.dart';
+import 'package:fitto/exceptions/http_exception.dart';
+import 'package:fitto/helpers/errors.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/workouts/day.dart';
+import 'package:fitto/models/workouts/slot.dart';
+import 'package:fitto/models/workouts/slot_entry.dart';
+import 'package:fitto/providers/routines.dart';
+import 'package:fitto/widgets/core/progress_indicator.dart';
+import 'package:fitto/widgets/exercises/autocompleter.dart';
+import 'package:fitto/widgets/routines/forms/slot_entry.dart';
+import 'package:fitto/widgets/routines/slot.dart';
 
 class SlotDetailWidget extends StatefulWidget {
   final Slot slot;

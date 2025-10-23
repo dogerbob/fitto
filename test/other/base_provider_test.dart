@@ -21,7 +21,7 @@ import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:wger/providers/base_provider.dart';
+import 'package:fitto/providers/base_provider.dart';
 
 import '../fixtures/fixture_reader.dart';
 import '../utils.dart';

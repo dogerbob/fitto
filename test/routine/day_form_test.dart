@@ -21,11 +21,11 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/workouts/day.dart';
-import 'package:wger/providers/routines.dart';
-import 'package:wger/widgets/routines/forms/day.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/workouts/day.dart';
+import 'package:fitto/providers/routines.dart';
+import 'package:fitto/widgets/routines/forms/day.dart';
 
 import '../../test_data/routines.dart';
 import 'routine_edit_test.mocks.dart';

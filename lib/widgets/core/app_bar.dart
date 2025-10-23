@@ -18,17 +18,17 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/providers/auth.dart';
-import 'package:wger/providers/body_weight.dart';
-import 'package:wger/providers/gallery.dart';
-import 'package:wger/providers/nutrition.dart';
-import 'package:wger/providers/routines.dart';
-import 'package:wger/providers/user.dart';
-import 'package:wger/screens/form_screen.dart';
-import 'package:wger/widgets/core/about.dart';
-import 'package:wger/widgets/core/settings.dart';
-import 'package:wger/widgets/user/forms.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/providers/auth.dart';
+import 'package:fitto/providers/body_weight.dart';
+import 'package:fitto/providers/gallery.dart';
+import 'package:fitto/providers/nutrition.dart';
+import 'package:fitto/providers/routines.dart';
+import 'package:fitto/providers/user.dart';
+import 'package:fitto/screens/form_screen.dart';
+import 'package:fitto/widgets/core/about.dart';
+import 'package:fitto/widgets/core/settings.dart';
+import 'package:fitto/widgets/user/forms.dart';
 
 class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String _title;

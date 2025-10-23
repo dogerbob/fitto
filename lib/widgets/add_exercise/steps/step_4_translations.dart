@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/helpers/exercises/validators.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/exercises/language.dart';
-import 'package:wger/providers/add_exercise.dart';
-import 'package:wger/providers/exercises.dart';
-import 'package:wger/widgets/add_exercise/add_exercise_text_area.dart';
-import 'package:wger/widgets/exercises/forms.dart';
+import 'package:fitto/helpers/exercises/validators.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/exercises/language.dart';
+import 'package:fitto/providers/add_exercise.dart';
+import 'package:fitto/providers/exercises.dart';
+import 'package:fitto/widgets/add_exercise/add_exercise_text_area.dart';
+import 'package:fitto/widgets/exercises/forms.dart';
 
 class Step4Translation extends StatefulWidget {
   final GlobalKey<FormState> formkey;

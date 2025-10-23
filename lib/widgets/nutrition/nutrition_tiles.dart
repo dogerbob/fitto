@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/nutrition/ingredient.dart';
-import 'package:wger/models/nutrition/log.dart';
-import 'package:wger/models/nutrition/nutritional_plan.dart';
-import 'package:wger/models/nutrition/nutritional_values.dart';
-import 'package:wger/providers/nutrition.dart';
-import 'package:wger/widgets/nutrition/helpers.dart';
-import 'package:wger/widgets/nutrition/nutrition_tile.dart';
-import 'package:wger/widgets/nutrition/widgets.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/nutrition/ingredient.dart';
+import 'package:fitto/models/nutrition/log.dart';
+import 'package:fitto/models/nutrition/nutritional_plan.dart';
+import 'package:fitto/models/nutrition/nutritional_values.dart';
+import 'package:fitto/providers/nutrition.dart';
+import 'package:fitto/widgets/nutrition/helpers.dart';
+import 'package:fitto/widgets/nutrition/nutrition_tile.dart';
+import 'package:fitto/widgets/nutrition/widgets.dart';
 
 /// a NutritionTitle showing an ingredient, with its
 /// avatar, nutritional values and button to popup its details

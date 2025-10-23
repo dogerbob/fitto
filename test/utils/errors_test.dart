@@ -17,7 +17,7 @@
  */
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:wger/helpers/errors.dart';
+import 'package:fitto/helpers/errors.dart';
 
 void main() {
   group('extractErrors', () {

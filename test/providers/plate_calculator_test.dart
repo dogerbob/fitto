@@ -3,8 +3,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart'; // Added for annotations
 import 'package:mockito/mockito.dart'; // Added for mockito
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/providers/plate_weights.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/providers/plate_weights.dart';
 
 import 'plate_calculator_test.mocks.dart';
 

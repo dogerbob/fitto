@@ -17,13 +17,13 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/widgets/core/app_bar.dart';
-import 'package:wger/widgets/dashboard/calendar.dart';
-import 'package:wger/widgets/dashboard/widgets/measurements.dart';
-import 'package:wger/widgets/dashboard/widgets/nutrition.dart';
-import 'package:wger/widgets/dashboard/widgets/routines.dart';
-import 'package:wger/widgets/dashboard/widgets/weight.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/widgets/core/app_bar.dart';
+import 'package:fitto/widgets/dashboard/calendar.dart';
+import 'package:fitto/widgets/dashboard/widgets/measurements.dart';
+import 'package:fitto/widgets/dashboard/widgets/nutrition.dart';
+import 'package:fitto/widgets/dashboard/widgets/routines.dart';
+import 'package:fitto/widgets/dashboard/widgets/weight.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen();

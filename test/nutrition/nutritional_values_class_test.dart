@@ -17,7 +17,7 @@
  */
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:wger/models/nutrition/nutritional_values.dart';
+import 'package:fitto/models/nutrition/nutritional_values.dart';
 
 void main() {
   var values1 = NutritionalValues();

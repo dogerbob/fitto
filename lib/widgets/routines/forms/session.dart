@@ -20,13 +20,13 @@ import 'package:clock/clock.dart';
 import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/exceptions/http_exception.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/helpers/errors.dart';
-import 'package:wger/helpers/json.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/workouts/session.dart';
-import 'package:wger/providers/routines.dart';
+import 'package:fitto/exceptions/http_exception.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/helpers/errors.dart';
+import 'package:fitto/helpers/json.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/workouts/session.dart';
+import 'package:fitto/providers/routines.dart';
 
 class SessionForm extends StatefulWidget {
   final _logger = Logger('SessionForm');

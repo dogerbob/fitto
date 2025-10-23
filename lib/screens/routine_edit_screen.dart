@@ -18,9 +18,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/providers/routines.dart';
-import 'package:wger/widgets/core/app_bar.dart';
-import 'package:wger/widgets/routines/routine_edit.dart';
+import 'package:fitto/providers/routines.dart';
+import 'package:fitto/widgets/core/app_bar.dart';
+import 'package:fitto/widgets/routines/routine_edit.dart';
 
 class RoutineEditScreen extends StatelessWidget {
   const RoutineEditScreen();

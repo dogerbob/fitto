@@ -17,14 +17,14 @@
  */
 import 'package:clock/clock.dart';
 import 'package:flutter/material.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/helpers/date.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/exercises/exercise.dart';
-import 'package:wger/models/workouts/routine.dart';
-import 'package:wger/models/workouts/session.dart';
-import 'package:wger/widgets/routines/forms/session.dart';
-import 'package:wger/widgets/routines/gym_mode/navigation.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/helpers/date.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/exercises/exercise.dart';
+import 'package:fitto/models/workouts/routine.dart';
+import 'package:fitto/models/workouts/session.dart';
+import 'package:fitto/widgets/routines/forms/session.dart';
+import 'package:fitto/widgets/routines/gym_mode/navigation.dart';
 
 class SessionPage extends StatelessWidget {
   final Routine _routine;

@@ -27,9 +27,9 @@ import 'package:http/http.dart' as http;
 import 'package:logging/logging.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:version/version.dart';
-import 'package:wger/exceptions/http_exception.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/helpers/shared_preferences.dart';
+import 'package:fitto/exceptions/http_exception.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/helpers/shared_preferences.dart';
 
 import 'helpers.dart';
 

@@ -21,9 +21,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/providers/exercises.dart';
-import 'package:wger/widgets/exercises/exercises.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/providers/exercises.dart';
+import 'package:fitto/widgets/exercises/exercises.dart';
 
 import '../../test_data/exercises.dart';
 import 'exercises_detail_widget_test.mocks.dart';

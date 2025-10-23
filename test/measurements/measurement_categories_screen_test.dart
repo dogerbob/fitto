@@ -21,12 +21,12 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/measurements/measurement_category.dart';
-import 'package:wger/models/measurements/measurement_entry.dart';
-import 'package:wger/providers/measurement.dart';
-import 'package:wger/screens/measurement_categories_screen.dart';
-import 'package:wger/widgets/measurements/charts.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/measurements/measurement_category.dart';
+import 'package:fitto/models/measurements/measurement_entry.dart';
+import 'package:fitto/providers/measurement.dart';
+import 'package:fitto/screens/measurement_categories_screen.dart';
+import 'package:fitto/widgets/measurements/charts.dart';
 
 import 'measurement_categories_screen_test.mocks.dart';
 

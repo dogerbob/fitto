@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
 
 class TextPrompt extends StatelessWidget {
   const TextPrompt();

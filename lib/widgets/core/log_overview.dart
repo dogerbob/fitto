@@ -18,8 +18,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
-import 'package:wger/helpers/logs.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
+import 'package:fitto/helpers/logs.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
 
 class LogOverviewPage extends StatelessWidget {
   static String routeName = '/LogOverviewPage';

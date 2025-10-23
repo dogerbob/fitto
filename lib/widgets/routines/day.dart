@@ -17,15 +17,15 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:wger/helpers/date.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/exercises/exercise.dart';
-import 'package:wger/models/workouts/day_data.dart';
-import 'package:wger/models/workouts/slot_data.dart';
-import 'package:wger/screens/gym_mode.dart';
-import 'package:wger/widgets/core/core.dart';
-import 'package:wger/widgets/exercises/exercises.dart';
-import 'package:wger/widgets/exercises/images.dart';
+import 'package:fitto/helpers/date.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/exercises/exercise.dart';
+import 'package:fitto/models/workouts/day_data.dart';
+import 'package:fitto/models/workouts/slot_data.dart';
+import 'package:fitto/screens/gym_mode.dart';
+import 'package:fitto/widgets/core/core.dart';
+import 'package:fitto/widgets/exercises/exercises.dart';
+import 'package:fitto/widgets/exercises/images.dart';
 
 class SetConfigDataWidget extends StatelessWidget {
   final Exercise exercise;

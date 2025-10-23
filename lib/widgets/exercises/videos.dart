@@ -20,8 +20,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:logging/logging.dart';
 import 'package:video_player/video_player.dart';
-import 'package:wger/helpers/errors.dart';
-import 'package:wger/models/exercises/video.dart';
+import 'package:fitto/helpers/errors.dart';
+import 'package:fitto/models/exercises/video.dart';
 
 class ExerciseVideoWidget extends StatefulWidget {
   const ExerciseVideoWidget({required this.video});

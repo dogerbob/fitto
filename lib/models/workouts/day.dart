@@ -17,8 +17,8 @@
  */
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/workouts/slot.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/workouts/slot.dart';
 
 part 'day.g.dart';
 

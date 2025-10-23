@@ -20,14 +20,14 @@ import 'package:collection/collection.dart';
 import 'package:flutter/widgets.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:logging/logging.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/helpers/json.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/nutrition/log.dart';
-import 'package:wger/models/nutrition/meal.dart';
-import 'package:wger/models/nutrition/meal_item.dart';
-import 'package:wger/models/nutrition/nutritional_goals.dart';
-import 'package:wger/models/nutrition/nutritional_values.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/helpers/json.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/nutrition/log.dart';
+import 'package:fitto/models/nutrition/meal.dart';
+import 'package:fitto/models/nutrition/meal_item.dart';
+import 'package:fitto/models/nutrition/nutritional_goals.dart';
+import 'package:fitto/models/nutrition/nutritional_values.dart';
 
 part 'nutritional_plan.g.dart';
 

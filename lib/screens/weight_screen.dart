@@ -18,12 +18,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/providers/body_weight.dart';
-import 'package:wger/screens/form_screen.dart';
-import 'package:wger/widgets/core/app_bar.dart';
-import 'package:wger/widgets/weight/forms.dart';
-import 'package:wger/widgets/weight/weight_overview.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/providers/body_weight.dart';
+import 'package:fitto/screens/form_screen.dart';
+import 'package:fitto/widgets/core/app_bar.dart';
+import 'package:fitto/widgets/weight/forms.dart';
+import 'package:fitto/widgets/weight/weight_overview.dart';
 
 class WeightScreen extends StatelessWidget {
   const WeightScreen();

@@ -17,13 +17,13 @@
  */
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/helpers/json.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/exercises/exercise.dart';
-import 'package:wger/models/workouts/base_config.dart';
-import 'package:wger/models/workouts/repetition_unit.dart';
-import 'package:wger/models/workouts/weight_unit.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/helpers/json.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/exercises/exercise.dart';
+import 'package:fitto/models/workouts/base_config.dart';
+import 'package:fitto/models/workouts/repetition_unit.dart';
+import 'package:fitto/models/workouts/weight_unit.dart';
 
 part 'slot_entry.g.dart';
 

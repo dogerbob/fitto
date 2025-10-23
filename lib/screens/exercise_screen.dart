@@ -17,8 +17,8 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:wger/models/exercises/exercise.dart';
-import 'package:wger/widgets/exercises/exercises.dart';
+import 'package:fitto/models/exercises/exercise.dart';
+import 'package:fitto/widgets/exercises/exercises.dart';
 
 class ExerciseDetailScreen extends StatelessWidget {
   static const routeName = '/exercise-detail';

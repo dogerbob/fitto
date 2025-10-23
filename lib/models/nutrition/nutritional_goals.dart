@@ -16,8 +16,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/models/nutrition/nutritional_values.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/models/nutrition/nutritional_values.dart';
 
 class NutritionalGoals {
   double? energy = 0;

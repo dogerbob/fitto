@@ -17,10 +17,10 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/nutrition/nutritional_plan.dart';
-import 'package:wger/screens/nutritional_plan_screen.dart';
-import 'package:wger/widgets/nutrition/meal.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/nutrition/nutritional_plan.dart';
+import 'package:fitto/screens/nutritional_plan_screen.dart';
+import 'package:fitto/widgets/nutrition/meal.dart';
 
 class LogMealsScreen extends StatefulWidget {
   const LogMealsScreen();

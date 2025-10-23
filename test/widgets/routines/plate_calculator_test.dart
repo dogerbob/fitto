@@ -3,9 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences_platform_interface/in_memory_shared_preferences_async.dart';
 import 'package:shared_preferences_platform_interface/shared_preferences_async_platform_interface.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/providers/plate_weights.dart';
-import 'package:wger/widgets/routines/plate_calculator.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/providers/plate_weights.dart';
+import 'package:fitto/widgets/routines/plate_calculator.dart';
 
 Future<void> pumpWidget(
   WidgetTester tester, {

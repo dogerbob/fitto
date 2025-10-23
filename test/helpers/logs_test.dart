@@ -18,7 +18,7 @@
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:logging/logging.dart';
-import 'package:wger/helpers/logs.dart';
+import 'package:fitto/helpers/logs.dart';
 
 void main() {
   group('log store test cases', () {

@@ -17,8 +17,8 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:wger/screens/form_screen.dart';
-import 'package:wger/theme/theme.dart';
+import 'package:fitto/screens/form_screen.dart';
+import 'package:fitto/theme/theme.dart';
 
 class NothingFound extends StatelessWidget {
   final String _title;

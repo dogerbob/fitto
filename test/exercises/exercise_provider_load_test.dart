@@ -5,10 +5,10 @@ import 'package:drift/native.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:wger/core/locator.dart';
-import 'package:wger/database/exercises/exercise_database.dart';
-import 'package:wger/models/exercises/exercise.dart';
-import 'package:wger/providers/exercises.dart';
+import 'package:fitto/core/locator.dart';
+import 'package:fitto/database/exercises/exercise_database.dart';
+import 'package:fitto/models/exercises/exercise.dart';
+import 'package:fitto/providers/exercises.dart';
 
 import '../../test_data/exercises.dart';
 import '../fixtures/fixture_reader.dart';

@@ -19,11 +19,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/helpers/misc.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/providers/auth.dart';
-import 'package:wger/screens/add_exercise_screen.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/helpers/misc.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/providers/auth.dart';
+import 'package:fitto/screens/add_exercise_screen.dart';
 
 import 'log_overview.dart';
 

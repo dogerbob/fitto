@@ -19,11 +19,11 @@
 import 'package:clock/clock.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/workouts/routine.dart';
-import 'package:wger/theme/theme.dart';
-import 'package:wger/widgets/routines/log.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/workouts/routine.dart';
+import 'package:fitto/theme/theme.dart';
+import 'package:fitto/widgets/routines/log.dart';
 
 class WorkoutLogs extends StatelessWidget {
   final Routine _routine;

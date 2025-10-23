@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/widgets/routines/plate_calculator.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/widgets/routines/plate_calculator.dart';
 
 class ConfigurePlatesScreen extends StatelessWidget {
   static const routeName = '/ConfigureAvailablePlates';

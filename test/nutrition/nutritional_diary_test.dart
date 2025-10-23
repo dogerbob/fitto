@@ -18,9 +18,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/widgets/nutrition/charts.dart';
-import 'package:wger/widgets/nutrition/nutritional_diary_detail.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/widgets/nutrition/charts.dart';
+import 'package:fitto/widgets/nutrition/nutritional_diary_detail.dart';
 
 import '../../test_data/nutritional_plans.dart';
 

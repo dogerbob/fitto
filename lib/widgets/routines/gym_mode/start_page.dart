@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/exercises/exercise.dart';
-import 'package:wger/models/workouts/day.dart';
-import 'package:wger/models/workouts/day_data.dart';
-import 'package:wger/widgets/exercises/images.dart';
-import 'package:wger/widgets/routines/gym_mode/navigation.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/exercises/exercise.dart';
+import 'package:fitto/models/workouts/day.dart';
+import 'package:fitto/models/workouts/day_data.dart';
+import 'package:fitto/widgets/exercises/images.dart';
+import 'package:fitto/widgets/routines/gym_mode/navigation.dart';
 
 class StartPage extends StatelessWidget {
   final PageController _controller;

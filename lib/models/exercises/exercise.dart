@@ -21,15 +21,15 @@ import 'package:collection/collection.dart';
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:logging/logging.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/models/exercises/category.dart';
-import 'package:wger/models/exercises/equipment.dart';
-import 'package:wger/models/exercises/exercise_api.dart';
-import 'package:wger/models/exercises/image.dart';
-import 'package:wger/models/exercises/language.dart';
-import 'package:wger/models/exercises/muscle.dart';
-import 'package:wger/models/exercises/translation.dart';
-import 'package:wger/models/exercises/video.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/models/exercises/category.dart';
+import 'package:fitto/models/exercises/equipment.dart';
+import 'package:fitto/models/exercises/exercise_api.dart';
+import 'package:fitto/models/exercises/image.dart';
+import 'package:fitto/models/exercises/language.dart';
+import 'package:fitto/models/exercises/muscle.dart';
+import 'package:fitto/models/exercises/translation.dart';
+import 'package:fitto/models/exercises/video.dart';
 
 part 'exercise.g.dart';
 

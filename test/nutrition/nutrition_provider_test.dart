@@ -3,10 +3,10 @@ import 'dart:convert';
 import 'package:drift/native.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:wger/database/ingredients/ingredients_database.dart';
-import 'package:wger/models/nutrition/ingredient.dart';
-import 'package:wger/models/nutrition/nutritional_plan.dart';
-import 'package:wger/providers/nutrition.dart';
+import 'package:fitto/database/ingredients/ingredients_database.dart';
+import 'package:fitto/models/nutrition/ingredient.dart';
+import 'package:fitto/models/nutrition/nutritional_plan.dart';
+import 'package:fitto/providers/nutrition.dart';
 
 import '../fixtures/fixture_reader.dart';
 import '../measurements/measurement_provider_test.mocks.dart';

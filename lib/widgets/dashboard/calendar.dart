@@ -20,15 +20,15 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:table_calendar/table_calendar.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/helpers/date.dart';
-import 'package:wger/helpers/json.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/providers/body_weight.dart';
-import 'package:wger/providers/measurement.dart';
-import 'package:wger/providers/nutrition.dart';
-import 'package:wger/providers/routines.dart';
-import 'package:wger/theme/theme.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/helpers/date.dart';
+import 'package:fitto/helpers/json.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/providers/body_weight.dart';
+import 'package:fitto/providers/measurement.dart';
+import 'package:fitto/providers/nutrition.dart';
+import 'package:fitto/providers/routines.dart';
+import 'package:fitto/theme/theme.dart';
 
 /// Types of events
 enum EventType { weight, measurement, session, caloriesDiary }

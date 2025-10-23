@@ -18,13 +18,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/nutrition/ingredient.dart';
-import 'package:wger/models/nutrition/meal.dart';
-import 'package:wger/models/nutrition/nutritional_values.dart';
-import 'package:wger/providers/nutrition.dart';
-import 'package:wger/widgets/core/core.dart';
-import 'package:wger/widgets/nutrition/ingredient_dialogs.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/nutrition/ingredient.dart';
+import 'package:fitto/models/nutrition/meal.dart';
+import 'package:fitto/models/nutrition/nutritional_values.dart';
+import 'package:fitto/providers/nutrition.dart';
+import 'package:fitto/widgets/core/core.dart';
+import 'package:fitto/widgets/nutrition/ingredient_dialogs.dart';
 
 List<String> getNutritionColumnNames(BuildContext context) => [
   AppLocalizations.of(context).energy,

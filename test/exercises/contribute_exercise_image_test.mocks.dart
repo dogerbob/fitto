@@ -9,16 +9,16 @@ import 'dart:ui' as _i15;
 import 'package:http/http.dart' as _i5;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i8;
-import 'package:wger/models/exercises/category.dart' as _i13;
-import 'package:wger/models/exercises/equipment.dart' as _i9;
-import 'package:wger/models/exercises/exercise_submission.dart' as _i11;
-import 'package:wger/models/exercises/exercise_submission_images.dart' as _i7;
-import 'package:wger/models/exercises/language.dart' as _i12;
-import 'package:wger/models/exercises/muscle.dart' as _i10;
-import 'package:wger/models/exercises/variation.dart' as _i3;
-import 'package:wger/providers/add_exercise.dart' as _i6;
-import 'package:wger/providers/auth.dart' as _i4;
-import 'package:wger/providers/base_provider.dart' as _i2;
+import 'package:fitto/models/exercises/category.dart' as _i13;
+import 'package:fitto/models/exercises/equipment.dart' as _i9;
+import 'package:fitto/models/exercises/exercise_submission.dart' as _i11;
+import 'package:fitto/models/exercises/exercise_submission_images.dart' as _i7;
+import 'package:fitto/models/exercises/language.dart' as _i12;
+import 'package:fitto/models/exercises/muscle.dart' as _i10;
+import 'package:fitto/models/exercises/variation.dart' as _i3;
+import 'package:fitto/providers/add_exercise.dart' as _i6;
+import 'package:fitto/providers/auth.dart' as _i4;
+import 'package:fitto/providers/base_provider.dart' as _i2;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values

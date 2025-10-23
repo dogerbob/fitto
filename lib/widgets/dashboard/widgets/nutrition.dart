@@ -20,15 +20,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg_icons/flutter_svg_icons.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/nutrition/nutritional_plan.dart';
-import 'package:wger/providers/nutrition.dart';
-import 'package:wger/screens/form_screen.dart';
-import 'package:wger/screens/log_meals_screen.dart';
-import 'package:wger/screens/nutritional_plan_screen.dart';
-import 'package:wger/widgets/dashboard/widgets/nothing_found.dart';
-import 'package:wger/widgets/nutrition/charts.dart';
-import 'package:wger/widgets/nutrition/forms.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/nutrition/nutritional_plan.dart';
+import 'package:fitto/providers/nutrition.dart';
+import 'package:fitto/screens/form_screen.dart';
+import 'package:fitto/screens/log_meals_screen.dart';
+import 'package:fitto/screens/nutritional_plan_screen.dart';
+import 'package:fitto/widgets/dashboard/widgets/nothing_found.dart';
+import 'package:fitto/widgets/nutrition/charts.dart';
+import 'package:fitto/widgets/nutrition/forms.dart';
 
 class DashboardNutritionWidget extends StatefulWidget {
   const DashboardNutritionWidget();

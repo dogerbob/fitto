@@ -17,8 +17,8 @@
  */
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:wger/models/workouts/day.dart';
-import 'package:wger/models/workouts/slot_data.dart';
+import 'package:fitto/models/workouts/day.dart';
+import 'package:fitto/models/workouts/slot_data.dart';
 
 part 'day_data.g.dart';
 

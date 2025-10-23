@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/helpers/exercises/validators.dart';
-import 'package:wger/helpers/i18n.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/exercises/category.dart';
-import 'package:wger/models/exercises/equipment.dart';
-import 'package:wger/models/exercises/muscle.dart';
-import 'package:wger/providers/add_exercise.dart';
-import 'package:wger/providers/exercises.dart';
-import 'package:wger/providers/user.dart';
-import 'package:wger/widgets/add_exercise/add_exercise_multiselect_button.dart';
-import 'package:wger/widgets/add_exercise/add_exercise_text_area.dart';
-import 'package:wger/widgets/exercises/exercises.dart';
-import 'package:wger/widgets/exercises/forms.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/helpers/exercises/validators.dart';
+import 'package:fitto/helpers/i18n.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/exercises/category.dart';
+import 'package:fitto/models/exercises/equipment.dart';
+import 'package:fitto/models/exercises/muscle.dart';
+import 'package:fitto/providers/add_exercise.dart';
+import 'package:fitto/providers/exercises.dart';
+import 'package:fitto/providers/user.dart';
+import 'package:fitto/widgets/add_exercise/add_exercise_multiselect_button.dart';
+import 'package:fitto/widgets/add_exercise/add_exercise_text_area.dart';
+import 'package:fitto/widgets/exercises/exercises.dart';
+import 'package:fitto/widgets/exercises/forms.dart';
 
 class Step1Basics extends StatelessWidget {
   final GlobalKey<FormState> formkey;

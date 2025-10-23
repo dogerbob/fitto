@@ -1,11 +1,11 @@
 import 'dart:convert';
 
 import 'package:drift/drift.dart';
-import 'package:wger/models/exercises/category.dart';
-import 'package:wger/models/exercises/equipment.dart';
-import 'package:wger/models/exercises/language.dart';
-import 'package:wger/models/exercises/muscle.dart';
-import 'package:wger/models/exercises/variation.dart';
+import 'package:fitto/models/exercises/category.dart';
+import 'package:fitto/models/exercises/equipment.dart';
+import 'package:fitto/models/exercises/language.dart';
+import 'package:fitto/models/exercises/muscle.dart';
+import 'package:fitto/models/exercises/variation.dart';
 
 class MuscleConverter extends TypeConverter<Muscle, String> {
   const MuscleConverter();

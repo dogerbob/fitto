@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/providers/exercises.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/providers/exercises.dart';
 
 class SettingsExerciseCache extends StatefulWidget {
   const SettingsExerciseCache({super.key});

@@ -18,10 +18,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/user/profile.dart';
-import 'package:wger/providers/user.dart';
-import 'package:wger/theme/theme.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/user/profile.dart';
+import 'package:fitto/providers/user.dart';
+import 'package:fitto/theme/theme.dart';
 
 class UserProfileForm extends StatefulWidget {
   late final Profile _profile;

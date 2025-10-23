@@ -1,4 +1,4 @@
-import 'package:wger/l10n/generated/app_localizations.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
 
 String? validateUrl(String? value, AppLocalizations i18n, {bool required = true}) {
   // Required?

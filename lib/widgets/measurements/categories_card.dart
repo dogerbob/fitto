@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/measurements/measurement_category.dart';
-import 'package:wger/screens/form_screen.dart';
-import 'package:wger/screens/measurement_entries_screen.dart';
-import 'package:wger/widgets/measurements/helpers.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/measurements/measurement_category.dart';
+import 'package:fitto/screens/form_screen.dart';
+import 'package:fitto/screens/measurement_entries_screen.dart';
+import 'package:fitto/widgets/measurements/helpers.dart';
 
 import 'charts.dart';
 import 'forms.dart';

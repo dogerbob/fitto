@@ -19,12 +19,12 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/helpers/json.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/measurements/measurement_category.dart';
-import 'package:wger/models/measurements/measurement_entry.dart';
-import 'package:wger/providers/measurement.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/helpers/json.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/measurements/measurement_category.dart';
+import 'package:fitto/models/measurements/measurement_entry.dart';
+import 'package:fitto/providers/measurement.dart';
 
 class MeasurementCategoryForm extends StatelessWidget {
   final _form = GlobalKey<FormState>();

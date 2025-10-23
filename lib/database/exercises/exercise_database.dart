@@ -5,11 +5,11 @@ import 'package:drift/native.dart';
 import 'package:logging/logging.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
-import 'package:wger/database/exercises/type_converters.dart';
-import 'package:wger/models/exercises/category.dart';
-import 'package:wger/models/exercises/equipment.dart';
-import 'package:wger/models/exercises/language.dart';
-import 'package:wger/models/exercises/muscle.dart';
+import 'package:fitto/database/exercises/type_converters.dart';
+import 'package:fitto/models/exercises/category.dart';
+import 'package:fitto/models/exercises/equipment.dart';
+import 'package:fitto/models/exercises/language.dart';
+import 'package:fitto/models/exercises/muscle.dart';
 
 part 'exercise_database.g.dart';
 

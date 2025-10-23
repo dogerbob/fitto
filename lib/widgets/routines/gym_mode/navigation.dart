@@ -17,10 +17,10 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/exercises/exercise.dart';
-import 'package:wger/theme/theme.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/exercises/exercise.dart';
+import 'package:fitto/theme/theme.dart';
 
 class NavigationFooter extends StatelessWidget {
   final PageController _controller;

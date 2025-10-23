@@ -18,13 +18,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/helpers/date.dart';
-import 'package:wger/helpers/json.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/nutrition/meal.dart';
-import 'package:wger/providers/nutrition.dart';
-import 'package:wger/widgets/nutrition/meal.dart';
-import 'package:wger/widgets/nutrition/nutrition_tiles.dart';
+import 'package:fitto/helpers/date.dart';
+import 'package:fitto/helpers/json.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/nutrition/meal.dart';
+import 'package:fitto/providers/nutrition.dart';
+import 'package:fitto/widgets/nutrition/meal.dart';
+import 'package:fitto/widgets/nutrition/nutrition_tiles.dart';
 
 class LogMealArguments {
   final Meal meal;

@@ -8,19 +8,19 @@ import 'dart:ui' as _i17;
 
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i16;
-import 'package:wger/models/exercises/exercise.dart' as _i15;
-import 'package:wger/models/workouts/base_config.dart' as _i9;
-import 'package:wger/models/workouts/day.dart' as _i6;
-import 'package:wger/models/workouts/day_data.dart' as _i14;
-import 'package:wger/models/workouts/log.dart' as _i11;
-import 'package:wger/models/workouts/repetition_unit.dart' as _i4;
-import 'package:wger/models/workouts/routine.dart' as _i5;
-import 'package:wger/models/workouts/session.dart' as _i10;
-import 'package:wger/models/workouts/slot.dart' as _i7;
-import 'package:wger/models/workouts/slot_entry.dart' as _i8;
-import 'package:wger/models/workouts/weight_unit.dart' as _i3;
-import 'package:wger/providers/base_provider.dart' as _i2;
-import 'package:wger/providers/routines.dart' as _i12;
+import 'package:fitto/models/exercises/exercise.dart' as _i15;
+import 'package:fitto/models/workouts/base_config.dart' as _i9;
+import 'package:fitto/models/workouts/day.dart' as _i6;
+import 'package:fitto/models/workouts/day_data.dart' as _i14;
+import 'package:fitto/models/workouts/log.dart' as _i11;
+import 'package:fitto/models/workouts/repetition_unit.dart' as _i4;
+import 'package:fitto/models/workouts/routine.dart' as _i5;
+import 'package:fitto/models/workouts/session.dart' as _i10;
+import 'package:fitto/models/workouts/slot.dart' as _i7;
+import 'package:fitto/models/workouts/slot_entry.dart' as _i8;
+import 'package:fitto/models/workouts/weight_unit.dart' as _i3;
+import 'package:fitto/providers/base_provider.dart' as _i2;
+import 'package:fitto/providers/routines.dart' as _i12;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values

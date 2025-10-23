@@ -18,9 +18,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/body_weight/weight_entry.dart';
-import 'package:wger/widgets/weight/forms.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/body_weight/weight_entry.dart';
+import 'package:fitto/widgets/weight/forms.dart';
 
 import '../../test_data/body_weight.dart';
 

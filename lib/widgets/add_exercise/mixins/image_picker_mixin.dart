@@ -3,8 +3,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/models/exercises/exercise_submission_images.dart';
-import 'package:wger/providers/add_exercise.dart';
+import 'package:fitto/models/exercises/exercise_submission_images.dart';
+import 'package:fitto/providers/add_exercise.dart';
 
 const validFileExtensions = ['jpg', 'jpeg', 'png', 'webp'];
 const maxFileSize = 20;

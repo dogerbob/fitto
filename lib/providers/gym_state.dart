@@ -2,7 +2,7 @@ import 'package:clock/clock.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:logging/logging.dart';
-import 'package:wger/models/exercises/exercise.dart';
+import 'package:fitto/models/exercises/exercise.dart';
 
 const DEFAULT_DURATION = Duration(hours: 5);
 

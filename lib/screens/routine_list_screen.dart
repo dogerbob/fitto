@@ -18,13 +18,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/workouts/routine.dart';
-import 'package:wger/providers/routines.dart';
-import 'package:wger/screens/form_screen.dart';
-import 'package:wger/widgets/routines/app_bar.dart';
-import 'package:wger/widgets/routines/forms/routine.dart';
-import 'package:wger/widgets/routines/routines_list.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/workouts/routine.dart';
+import 'package:fitto/providers/routines.dart';
+import 'package:fitto/screens/form_screen.dart';
+import 'package:fitto/widgets/routines/app_bar.dart';
+import 'package:fitto/widgets/routines/forms/routine.dart';
+import 'package:fitto/widgets/routines/routines_list.dart';
 
 class RoutineListScreen extends StatelessWidget {
   const RoutineListScreen();

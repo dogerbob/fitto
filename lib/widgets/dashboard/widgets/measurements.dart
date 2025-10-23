@@ -20,12 +20,12 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/providers/measurement.dart';
-import 'package:wger/screens/measurement_categories_screen.dart';
-import 'package:wger/widgets/dashboard/widgets/nothing_found.dart';
-import 'package:wger/widgets/measurements/categories_card.dart';
-import 'package:wger/widgets/measurements/forms.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/providers/measurement.dart';
+import 'package:fitto/screens/measurement_categories_screen.dart';
+import 'package:fitto/widgets/dashboard/widgets/nothing_found.dart';
+import 'package:fitto/widgets/measurements/categories_card.dart';
+import 'package:fitto/widgets/measurements/forms.dart';
 
 class DashboardMeasurementWidget extends StatefulWidget {
   const DashboardMeasurementWidget();

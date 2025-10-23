@@ -23,12 +23,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/database/exercises/exercise_database.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/providers/base_provider.dart';
-import 'package:wger/providers/exercises.dart';
-import 'package:wger/providers/routines.dart';
-import 'package:wger/screens/routine_screen.dart';
+import 'package:fitto/database/exercises/exercise_database.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/providers/base_provider.dart';
+import 'package:fitto/providers/exercises.dart';
+import 'package:fitto/providers/routines.dart';
+import 'package:fitto/screens/routine_screen.dart';
 
 import '../../test_data/routines.dart';
 import 'routine_screen_test.mocks.dart';

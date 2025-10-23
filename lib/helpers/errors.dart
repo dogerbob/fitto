@@ -26,11 +26,11 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:logging/logging.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:wger/exceptions/http_exception.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/main.dart';
-import 'package:wger/models/workouts/log.dart';
-import 'package:wger/providers/routines.dart';
+import 'package:fitto/exceptions/http_exception.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/main.dart';
+import 'package:fitto/models/workouts/log.dart';
+import 'package:fitto/providers/routines.dart';
 
 import 'consts.dart';
 import 'logs.dart';

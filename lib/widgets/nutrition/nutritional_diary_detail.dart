@@ -17,11 +17,11 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/nutrition/nutritional_plan.dart';
-import 'package:wger/models/nutrition/nutritional_values.dart';
-import 'package:wger/widgets/nutrition/charts.dart';
-import 'package:wger/widgets/nutrition/nutrition_tiles.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/nutrition/nutritional_plan.dart';
+import 'package:fitto/models/nutrition/nutritional_values.dart';
+import 'package:fitto/widgets/nutrition/charts.dart';
+import 'package:fitto/widgets/nutrition/nutrition_tiles.dart';
 
 class NutritionalDiaryDetailWidget extends StatelessWidget {
   final NutritionalPlan _nutritionalPlan;

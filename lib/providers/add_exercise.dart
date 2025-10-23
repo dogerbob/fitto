@@ -1,14 +1,14 @@
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:logging/logging.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/models/exercises/category.dart';
-import 'package:wger/models/exercises/equipment.dart';
-import 'package:wger/models/exercises/exercise_submission.dart';
-import 'package:wger/models/exercises/exercise_submission_images.dart';
-import 'package:wger/models/exercises/language.dart';
-import 'package:wger/models/exercises/muscle.dart';
-import 'package:wger/models/exercises/variation.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/models/exercises/category.dart';
+import 'package:fitto/models/exercises/equipment.dart';
+import 'package:fitto/models/exercises/exercise_submission.dart';
+import 'package:fitto/models/exercises/exercise_submission_images.dart';
+import 'package:fitto/models/exercises/language.dart';
+import 'package:fitto/models/exercises/muscle.dart';
+import 'package:fitto/models/exercises/variation.dart';
 
 import 'base_provider.dart';
 

@@ -18,8 +18,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/helpers/i18n.dart';
-import 'package:wger/providers/exercises.dart';
+import 'package:fitto/helpers/i18n.dart';
+import 'package:fitto/providers/exercises.dart';
 
 class ExerciseFilterModalBody extends StatefulWidget {
   const ExerciseFilterModalBody({super.key});

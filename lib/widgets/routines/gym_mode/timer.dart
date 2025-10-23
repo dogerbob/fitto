@@ -19,10 +19,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/exercises/exercise.dart';
-import 'package:wger/theme/theme.dart';
-import 'package:wger/widgets/routines/gym_mode/navigation.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/exercises/exercise.dart';
+import 'package:fitto/theme/theme.dart';
+import 'package:fitto/widgets/routines/gym_mode/navigation.dart';
 
 class TimerWidget extends StatefulWidget {
   final PageController _controller;

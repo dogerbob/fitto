@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
 
 class UsernameField extends StatelessWidget {
   final TextEditingController controller;

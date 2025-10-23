@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/nutrition/nutritional_goals.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/nutrition/nutritional_goals.dart';
 
 class MacronutrientsTable extends StatelessWidget {
   const MacronutrientsTable({

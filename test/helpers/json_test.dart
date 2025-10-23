@@ -18,7 +18,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:wger/helpers/json.dart';
+import 'package:fitto/helpers/json.dart';
 
 void main() {
   group('json file test cases', () {

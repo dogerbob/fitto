@@ -19,8 +19,8 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:mockito/mockito.dart';
-import 'package:wger/models/gallery/image.dart' as gallery;
-import 'package:wger/providers/gallery.dart';
+import 'package:fitto/models/gallery/image.dart' as gallery;
+import 'package:fitto/providers/gallery.dart';
 
 import '../other/base_provider_test.mocks.dart';
 import '../utils.dart';

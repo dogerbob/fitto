@@ -18,11 +18,11 @@
 
 //import 'package:drift/drift.dart';
 import 'package:flutter/material.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/screens/configure_plates_screen.dart';
-import 'package:wger/widgets/core/settings/exercise_cache.dart';
-import 'package:wger/widgets/core/settings/ingredient_cache.dart';
-import 'package:wger/widgets/core/settings/theme.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/screens/configure_plates_screen.dart';
+import 'package:fitto/widgets/core/settings/exercise_cache.dart';
+import 'package:fitto/widgets/core/settings/ingredient_cache.dart';
+import 'package:fitto/widgets/core/settings/theme.dart';
 
 class SettingsPage extends StatelessWidget {
   static String routeName = '/SettingsPage';

@@ -1,11 +1,11 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:wger/helpers/misc.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/nutrition/ingredient.dart';
-import 'package:wger/models/nutrition/nutritional_goals.dart';
-import 'package:wger/widgets/nutrition/macro_nutrients_table.dart';
+import 'package:fitto/helpers/misc.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/nutrition/ingredient.dart';
+import 'package:fitto/models/nutrition/nutritional_goals.dart';
+import 'package:fitto/widgets/nutrition/macro_nutrients_table.dart';
 
 Widget ingredientImage(String url, BuildContext context) {
   var radius = 100.0;

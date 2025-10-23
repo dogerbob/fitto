@@ -3,8 +3,8 @@ import 'dart:io';
 
 import 'package:drift/native.dart';
 import 'package:get_it/get_it.dart';
-import 'package:wger/database/exercises/exercise_database.dart';
-import 'package:wger/database/ingredients/ingredients_database.dart';
+import 'package:fitto/database/exercises/exercise_database.dart';
+import 'package:fitto/database/ingredients/ingredients_database.dart';
 
 final locator = GetIt.asNewInstance();
 

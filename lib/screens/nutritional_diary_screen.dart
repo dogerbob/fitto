@@ -19,9 +19,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/models/nutrition/nutritional_plan.dart';
-import 'package:wger/providers/nutrition.dart';
-import 'package:wger/widgets/nutrition/nutritional_diary_detail.dart';
+import 'package:fitto/models/nutrition/nutritional_plan.dart';
+import 'package:fitto/providers/nutrition.dart';
+import 'package:fitto/widgets/nutrition/nutritional_diary_detail.dart';
 
 /// Arguments passed to the form screen
 class NutritionalDiaryArguments {

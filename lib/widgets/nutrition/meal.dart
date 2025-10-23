@@ -19,19 +19,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_icons/flutter_svg_icons.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/nutrition/meal.dart';
-import 'package:wger/models/nutrition/meal_item.dart';
-import 'package:wger/providers/nutrition.dart';
-import 'package:wger/screens/form_screen.dart';
-import 'package:wger/screens/log_meal_screen.dart';
-import 'package:wger/widgets/nutrition/charts.dart';
-import 'package:wger/widgets/nutrition/forms.dart';
-import 'package:wger/widgets/nutrition/helpers.dart';
-import 'package:wger/widgets/nutrition/nutrition_tile.dart';
-import 'package:wger/widgets/nutrition/nutrition_tiles.dart';
-import 'package:wger/widgets/nutrition/widgets.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/nutrition/meal.dart';
+import 'package:fitto/models/nutrition/meal_item.dart';
+import 'package:fitto/providers/nutrition.dart';
+import 'package:fitto/screens/form_screen.dart';
+import 'package:fitto/screens/log_meal_screen.dart';
+import 'package:fitto/widgets/nutrition/charts.dart';
+import 'package:fitto/widgets/nutrition/forms.dart';
+import 'package:fitto/widgets/nutrition/helpers.dart';
+import 'package:fitto/widgets/nutrition/nutrition_tile.dart';
+import 'package:fitto/widgets/nutrition/nutrition_tiles.dart';
+import 'package:fitto/widgets/nutrition/widgets.dart';
 
 enum viewMode {
   base, // just highlevel meal info (name, time)

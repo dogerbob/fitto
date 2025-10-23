@@ -9,9 +9,9 @@ import 'dart:ui' as _i8;
 import 'package:http/http.dart' as _i3;
 import 'package:image_picker/image_picker.dart' as _i7;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:wger/models/gallery/image.dart' as _i5;
-import 'package:wger/providers/auth.dart' as _i2;
-import 'package:wger/providers/gallery.dart' as _i4;
+import 'package:fitto/models/gallery/image.dart' as _i5;
+import 'package:fitto/providers/auth.dart' as _i2;
+import 'package:fitto/providers/gallery.dart' as _i4;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values

@@ -17,8 +17,8 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/workouts/slot_entry.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/workouts/slot_entry.dart';
 
 /// Input widget for Reps In Reserve
 class RiRInputWidget extends StatefulWidget {

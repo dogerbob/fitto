@@ -17,8 +17,8 @@
  */
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:wger/models/nutrition/ingredient.dart';
-import 'package:wger/models/nutrition/weight_unit.dart';
+import 'package:fitto/models/nutrition/ingredient.dart';
+import 'package:fitto/models/nutrition/weight_unit.dart';
 
 part 'ingredient_weight_unit.g.dart';
 

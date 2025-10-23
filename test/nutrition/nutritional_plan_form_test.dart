@@ -21,12 +21,12 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/nutrition/nutritional_plan.dart';
-import 'package:wger/providers/nutrition.dart';
-import 'package:wger/screens/nutritional_plan_screen.dart';
-import 'package:wger/widgets/nutrition/forms.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/nutrition/nutritional_plan.dart';
+import 'package:fitto/providers/nutrition.dart';
+import 'package:fitto/screens/nutritional_plan_screen.dart';
+import 'package:fitto/widgets/nutrition/forms.dart';
 
 import './nutritional_plan_form_test.mocks.dart';
 

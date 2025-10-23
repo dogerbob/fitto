@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:wger/models/exercises/exercise.dart';
+import 'package:fitto/models/exercises/exercise.dart';
 
 import '../../test_data/exercises.dart';
 import '../fixtures/fixture_reader.dart';

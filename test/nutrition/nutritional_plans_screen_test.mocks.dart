@@ -12,8 +12,8 @@ import 'package:http/http.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i6;
 import 'package:package_info_plus/package_info_plus.dart' as _i4;
-import 'package:wger/providers/auth.dart' as _i3;
-import 'package:wger/providers/base_provider.dart' as _i8;
+import 'package:fitto/providers/auth.dart' as _i3;
+import 'package:fitto/providers/base_provider.dart' as _i8;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values

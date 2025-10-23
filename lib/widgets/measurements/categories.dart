@@ -18,7 +18,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/providers/measurement.dart';
+import 'package:fitto/providers/measurement.dart';
 
 import 'categories_card.dart';
 

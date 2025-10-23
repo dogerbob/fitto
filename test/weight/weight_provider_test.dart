@@ -22,9 +22,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:wger/models/body_weight/weight_entry.dart';
-import 'package:wger/providers/base_provider.dart';
-import 'package:wger/providers/body_weight.dart';
+import 'package:fitto/models/body_weight/weight_entry.dart';
+import 'package:fitto/providers/base_provider.dart';
+import 'package:fitto/providers/body_weight.dart';
 
 import '../fixtures/fixture_reader.dart';
 import 'weight_provider_test.mocks.dart';

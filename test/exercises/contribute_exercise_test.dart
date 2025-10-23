@@ -21,11 +21,11 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/providers/add_exercise.dart';
-import 'package:wger/providers/exercises.dart';
-import 'package:wger/providers/user.dart';
-import 'package:wger/screens/add_exercise_screen.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/providers/add_exercise.dart';
+import 'package:fitto/providers/exercises.dart';
+import 'package:fitto/providers/user.dart';
+import 'package:fitto/screens/add_exercise_screen.dart';
 
 import '../../test_data/exercises.dart';
 import '../../test_data/profile.dart';

@@ -18,17 +18,17 @@
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:wger/helpers/colors.dart';
-import 'package:wger/helpers/date.dart';
-import 'package:wger/helpers/errors.dart';
-import 'package:wger/helpers/misc.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/workouts/log.dart';
-import 'package:wger/models/workouts/routine.dart';
-import 'package:wger/models/workouts/session.dart';
-import 'package:wger/widgets/measurements/charts.dart';
-import 'package:wger/widgets/routines/charts.dart';
-import 'package:wger/widgets/routines/forms/session.dart';
+import 'package:fitto/helpers/colors.dart';
+import 'package:fitto/helpers/date.dart';
+import 'package:fitto/helpers/errors.dart';
+import 'package:fitto/helpers/misc.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/workouts/log.dart';
+import 'package:fitto/models/workouts/routine.dart';
+import 'package:fitto/models/workouts/session.dart';
+import 'package:fitto/widgets/measurements/charts.dart';
+import 'package:fitto/widgets/routines/charts.dart';
+import 'package:fitto/widgets/routines/forms/session.dart';
 
 class SessionInfo extends StatefulWidget {
   final WorkoutSession _session;

@@ -18,9 +18,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/providers/routines.dart';
-import 'package:wger/widgets/core/app_bar.dart';
-import 'package:wger/widgets/routines/workout_logs.dart';
+import 'package:fitto/providers/routines.dart';
+import 'package:fitto/widgets/core/app_bar.dart';
+import 'package:fitto/widgets/routines/workout_logs.dart';
 
 class WorkoutLogsScreen extends StatelessWidget {
   const WorkoutLogsScreen();

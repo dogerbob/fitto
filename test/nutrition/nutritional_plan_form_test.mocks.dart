@@ -7,13 +7,13 @@ import 'dart:async' as _i9;
 import 'dart:ui' as _i10;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:wger/database/ingredients/ingredients_database.dart' as _i3;
-import 'package:wger/models/nutrition/ingredient.dart' as _i7;
-import 'package:wger/models/nutrition/meal.dart' as _i5;
-import 'package:wger/models/nutrition/meal_item.dart' as _i6;
-import 'package:wger/models/nutrition/nutritional_plan.dart' as _i4;
-import 'package:wger/providers/base_provider.dart' as _i2;
-import 'package:wger/providers/nutrition.dart' as _i8;
+import 'package:fitto/database/ingredients/ingredients_database.dart' as _i3;
+import 'package:fitto/models/nutrition/ingredient.dart' as _i7;
+import 'package:fitto/models/nutrition/meal.dart' as _i5;
+import 'package:fitto/models/nutrition/meal_item.dart' as _i6;
+import 'package:fitto/models/nutrition/nutritional_plan.dart' as _i4;
+import 'package:fitto/providers/base_provider.dart' as _i2;
+import 'package:fitto/providers/nutrition.dart' as _i8;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values

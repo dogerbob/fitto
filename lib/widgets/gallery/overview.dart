@@ -20,13 +20,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/helpers/platform.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/gallery/image.dart' as gallery;
-import 'package:wger/providers/gallery.dart';
-import 'package:wger/screens/form_screen.dart';
-import 'package:wger/widgets/core/image.dart';
-import 'package:wger/widgets/core/text_prompt.dart';
+import 'package:fitto/helpers/platform.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/gallery/image.dart' as gallery;
+import 'package:fitto/providers/gallery.dart';
+import 'package:fitto/screens/form_screen.dart';
+import 'package:fitto/widgets/core/image.dart';
+import 'package:fitto/widgets/core/text_prompt.dart';
 
 import 'forms.dart';
 

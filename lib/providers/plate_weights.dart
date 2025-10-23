@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:logging/logging.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/helpers/gym_mode.dart';
-import 'package:wger/helpers/shared_preferences.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/helpers/gym_mode.dart';
+import 'package:fitto/helpers/shared_preferences.dart';
 
 const DEFAULT_KG_PLATES = [2.5, 5, 10, 15, 20, 25];
 const DEFAULT_LB_PLATES = [2.5, 5, 10, 25, 35, 45];

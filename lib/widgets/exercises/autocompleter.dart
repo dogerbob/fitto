@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/exercises/exercise.dart';
-import 'package:wger/providers/exercises.dart';
-import 'package:wger/screens/add_exercise_screen.dart';
-import 'package:wger/widgets/exercises/images.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/exercises/exercise.dart';
+import 'package:fitto/providers/exercises.dart';
+import 'package:fitto/screens/add_exercise_screen.dart';
+import 'package:fitto/widgets/exercises/images.dart';
 
 typedef ExerciseSelectedCallback = void Function(Exercise exercise);
 

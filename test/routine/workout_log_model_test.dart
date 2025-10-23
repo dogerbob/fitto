@@ -17,7 +17,7 @@
  */
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:wger/models/workouts/log.dart';
+import 'package:fitto/models/workouts/log.dart';
 
 void main() {
   group('Test the workout log model', () {

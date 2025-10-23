@@ -19,15 +19,15 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/providers/body_weight.dart';
-import 'package:wger/providers/user.dart';
-import 'package:wger/screens/form_screen.dart';
-import 'package:wger/screens/weight_screen.dart';
-import 'package:wger/widgets/dashboard/widgets/nothing_found.dart';
-import 'package:wger/widgets/measurements/charts.dart';
-import 'package:wger/widgets/measurements/helpers.dart';
-import 'package:wger/widgets/weight/forms.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/providers/body_weight.dart';
+import 'package:fitto/providers/user.dart';
+import 'package:fitto/screens/form_screen.dart';
+import 'package:fitto/screens/weight_screen.dart';
+import 'package:fitto/widgets/dashboard/widgets/nothing_found.dart';
+import 'package:fitto/widgets/measurements/charts.dart';
+import 'package:fitto/widgets/measurements/helpers.dart';
+import 'package:fitto/widgets/weight/forms.dart';
 
 class DashboardWeightWidget extends StatelessWidget {
   const DashboardWeightWidget();

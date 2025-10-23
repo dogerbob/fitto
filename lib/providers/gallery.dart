@@ -22,9 +22,9 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
-import 'package:wger/helpers/json.dart';
-import 'package:wger/models/gallery/image.dart' as gallery;
-import 'package:wger/providers/base_provider.dart';
+import 'package:fitto/helpers/json.dart';
+import 'package:fitto/models/gallery/image.dart' as gallery;
+import 'package:fitto/providers/base_provider.dart';
 
 class GalleryProvider extends WgerBaseProvider with ChangeNotifier {
   static const _galleryUrlPath = 'gallery';

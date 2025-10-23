@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
 
 /// Static widget displaying CC BY-SA 4.0 license notice for image uploads
 ///

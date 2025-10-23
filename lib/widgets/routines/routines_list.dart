@@ -19,10 +19,10 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/providers/routines.dart';
-import 'package:wger/screens/routine_screen.dart';
-import 'package:wger/widgets/core/text_prompt.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/providers/routines.dart';
+import 'package:fitto/screens/routine_screen.dart';
+import 'package:fitto/widgets/core/text_prompt.dart';
 
 class RoutinesList extends StatefulWidget {
   final RoutinesProvider _routineProvider;

@@ -18,9 +18,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/providers/exercises.dart';
-import 'package:wger/screens/add_exercise_screen.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/providers/exercises.dart';
+import 'package:fitto/screens/add_exercise_screen.dart';
 
 import 'filter_modal.dart';
 

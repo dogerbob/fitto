@@ -17,8 +17,8 @@
  */
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:wger/models/exercises/exercise.dart';
-import 'package:wger/models/workouts/slot_entry.dart';
+import 'package:fitto/models/exercises/exercise.dart';
+import 'package:fitto/models/workouts/slot_entry.dart';
 
 part 'slot.g.dart';
 

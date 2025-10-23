@@ -3,13 +3,13 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/exercises/exercise_submission_images.dart';
-import 'package:wger/providers/add_exercise.dart';
-import 'package:wger/providers/user.dart';
-import 'package:wger/widgets/add_exercise/image_details_form.dart';
-import 'package:wger/widgets/add_exercise/mixins/image_picker_mixin.dart';
-import 'package:wger/widgets/add_exercise/preview_images.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/exercises/exercise_submission_images.dart';
+import 'package:fitto/providers/add_exercise.dart';
+import 'package:fitto/providers/user.dart';
+import 'package:fitto/widgets/add_exercise/image_details_form.dart';
+import 'package:fitto/widgets/add_exercise/mixins/image_picker_mixin.dart';
+import 'package:fitto/widgets/add_exercise/preview_images.dart';
 
 /// Step 5 of exercise creation wizard - Image upload with license metadata
 ///

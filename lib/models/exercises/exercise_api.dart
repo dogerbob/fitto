@@ -1,12 +1,12 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:wger/models/exercises/category.dart';
-import 'package:wger/models/exercises/equipment.dart';
-import 'package:wger/models/exercises/image.dart';
-import 'package:wger/models/exercises/muscle.dart';
-import 'package:wger/models/exercises/translation.dart';
-import 'package:wger/models/exercises/video.dart';
+import 'package:fitto/models/exercises/category.dart';
+import 'package:fitto/models/exercises/equipment.dart';
+import 'package:fitto/models/exercises/image.dart';
+import 'package:fitto/models/exercises/muscle.dart';
+import 'package:fitto/models/exercises/translation.dart';
+import 'package:fitto/models/exercises/video.dart';
 
 part 'exercise_api.freezed.dart';
 part 'exercise_api.g.dart';

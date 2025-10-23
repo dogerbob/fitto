@@ -19,20 +19,20 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/helpers/date.dart';
-import 'package:wger/helpers/json.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/nutrition/ingredient.dart';
-import 'package:wger/models/nutrition/log.dart';
-import 'package:wger/models/nutrition/meal.dart';
-import 'package:wger/models/nutrition/meal_item.dart';
-import 'package:wger/models/nutrition/nutritional_plan.dart';
-import 'package:wger/providers/nutrition.dart';
-import 'package:wger/screens/nutritional_plan_screen.dart';
-import 'package:wger/widgets/nutrition/helpers.dart';
-import 'package:wger/widgets/nutrition/nutrition_tiles.dart';
-import 'package:wger/widgets/nutrition/widgets.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/helpers/date.dart';
+import 'package:fitto/helpers/json.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/nutrition/ingredient.dart';
+import 'package:fitto/models/nutrition/log.dart';
+import 'package:fitto/models/nutrition/meal.dart';
+import 'package:fitto/models/nutrition/meal_item.dart';
+import 'package:fitto/models/nutrition/nutritional_plan.dart';
+import 'package:fitto/providers/nutrition.dart';
+import 'package:fitto/screens/nutritional_plan_screen.dart';
+import 'package:fitto/widgets/nutrition/helpers.dart';
+import 'package:fitto/widgets/nutrition/nutrition_tiles.dart';
+import 'package:fitto/widgets/nutrition/widgets.dart';
 
 class MealForm extends StatelessWidget {
   late final Meal _meal;

@@ -19,17 +19,17 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/exceptions/http_exception.dart';
-import 'package:wger/helpers/consts.dart';
-import 'package:wger/helpers/errors.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/screens/update_app_screen.dart';
-import 'package:wger/theme/theme.dart';
-import 'package:wger/widgets/auth/api_token_field.dart';
-import 'package:wger/widgets/auth/email_field.dart';
-import 'package:wger/widgets/auth/password_field.dart';
-import 'package:wger/widgets/auth/server_field.dart';
-import 'package:wger/widgets/auth/username_field.dart';
+import 'package:fitto/exceptions/http_exception.dart';
+import 'package:fitto/helpers/consts.dart';
+import 'package:fitto/helpers/errors.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/screens/update_app_screen.dart';
+import 'package:fitto/theme/theme.dart';
+import 'package:fitto/widgets/auth/api_token_field.dart';
+import 'package:fitto/widgets/auth/email_field.dart';
+import 'package:fitto/widgets/auth/password_field.dart';
+import 'package:fitto/widgets/auth/server_field.dart';
+import 'package:fitto/widgets/auth/username_field.dart';
 
 import '../providers/auth.dart';
 

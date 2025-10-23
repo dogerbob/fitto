@@ -17,7 +17,7 @@
  */
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:wger/helpers/date.dart';
+import 'package:fitto/helpers/date.dart';
 
 void main() {
   group('getDateTimeFromDateAndTime', () {

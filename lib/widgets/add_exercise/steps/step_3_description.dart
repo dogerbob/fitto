@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wger/helpers/exercises/validators.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/providers/add_exercise.dart';
-import 'package:wger/widgets/add_exercise/add_exercise_text_area.dart';
+import 'package:fitto/helpers/exercises/validators.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/providers/add_exercise.dart';
+import 'package:fitto/widgets/add_exercise/add_exercise_text_area.dart';
 
 class Step3Description extends StatelessWidget {
   final GlobalKey<FormState> formkey;

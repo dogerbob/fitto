@@ -19,7 +19,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/widgets.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:wger/helpers/i18n.dart';
+import 'package:fitto/helpers/i18n.dart';
 
 part 'muscle.g.dart';
 

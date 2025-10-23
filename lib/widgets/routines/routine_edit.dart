@@ -18,12 +18,12 @@
 
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
-import 'package:wger/models/workouts/day.dart';
-import 'package:wger/models/workouts/routine.dart';
-import 'package:wger/widgets/routines/forms/day.dart';
-import 'package:wger/widgets/routines/forms/routine.dart';
-import 'package:wger/widgets/routines/routine_detail.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'package:fitto/models/workouts/day.dart';
+import 'package:fitto/models/workouts/routine.dart';
+import 'package:fitto/widgets/routines/forms/day.dart';
+import 'package:fitto/widgets/routines/forms/routine.dart';
+import 'package:fitto/widgets/routines/routine_detail.dart';
 
 class RoutineEdit extends StatefulWidget {
   final Routine _routine;

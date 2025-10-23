@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wger/l10n/generated/app_localizations.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
 
 /// The amount of characters an exercise description needs to have
 const MIN_CHARS_DESCRIPTION = 40;
