@@ -34,7 +34,9 @@ const FlexSubThemesData wgerSubThemeData = FlexSubThemesData(
   dialogRadius: 24.0,
   fabRadius: 28.0,
   chipRadius: 16.0,
-  buttonRadius: 16.0,
+  elevatedButtonRadius: 16.0,
+  outlinedButtonRadius: 16.0,
+  textButtonRadius: 16.0,
 );
 
 const String wgerDisplayFont = 'RobotoCondensed';
