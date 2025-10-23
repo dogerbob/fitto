@@ -1,13 +1,16 @@
 import 'package:fitto/models/nutrition_entry.dart';
 import 'package:fitto/services/storage_service.dart';
 import 'package:fitto/services/ai_service.dart';
+import 'package:fitto/services/database_service.dart';
 import 'package:image_picker/image_picker.dart';
 
 class NutritionService {
   final StorageService _storage = StorageService();
+  final DatabaseService _database = DatabaseService();
   final AIService _aiService = AIService();
   final ImagePicker _imagePicker = ImagePicker();
   List<NutritionEntry> _entries = [];
+  String _currentUserId = 'user_1'; // This should come from auth service
 
   Future<void> initialize() async {
     await _loadEntries();
@@ -17,8 +20,13 @@ class NutritionService {
   }
 
   Future<void> _loadEntries() async {
-    final list = await _storage.getList(StorageService.nutritionKey);
-    _entries = list.map((json) => NutritionEntry.fromJson(json)).toList();
+    try {
+      _entries = await _database.getNutritionEntries(_currentUserId, null);
+    } catch (e) {
+      // Fallback to storage service if database fails
+      final list = await _storage.getList(StorageService.nutritionKey);
+      _entries = list.map((json) => NutritionEntry.fromJson(json)).toList();
+    }
   }
 
   Future<void> _createSampleEntries() async {
@@ -34,37 +42,82 @@ class NutritionService {
   }
 
   Future<void> _saveEntries() async {
-    await _storage.saveList(StorageService.nutritionKey, _entries.map((e) => e.toJson()).toList());
+    try {
+      // Save to database
+      for (final entry in _entries) {
+        await _database.insertNutritionEntry(entry);
+      }
+    } catch (e) {
+      // Fallback to storage service if database fails
+      await _storage.saveList(StorageService.nutritionKey, _entries.map((e) => e.toJson()).toList());
+    }
   }
 
   List<NutritionEntry> get entries => _entries;
 
-  List<NutritionEntry> getEntriesByDate(DateTime date) => _entries.where((e) => e.date.year == date.year && e.date.month == date.month && e.date.day == date.day).toList();
-
-  List<NutritionEntry> getEntriesByMealType(String mealType, DateTime date) => getEntriesByDate(date).where((e) => e.mealType == mealType).toList();
-
-  int getTotalCaloriesByDate(DateTime date) {
-    final dayEntries = getEntriesByDate(date);
-    return dayEntries.fold(0, (sum, entry) => sum + entry.calories);
+  Future<List<NutritionEntry>> getEntriesByDate(DateTime date) async {
+    try {
+      return await _database.getNutritionEntries(_currentUserId, date);
+    } catch (e) {
+      // Fallback to in-memory data
+      return _entries.where((e) => e.date.year == date.year && e.date.month == date.month && e.date.day == date.day).toList();
+    }
   }
 
-  Map<String, double> getMacrosByDate(DateTime date) {
-    final dayEntries = getEntriesByDate(date);
-    return {
-      'protein': dayEntries.fold(0.0, (sum, entry) => sum + entry.protein),
-      'carbs': dayEntries.fold(0.0, (sum, entry) => sum + entry.carbs),
-      'fats': dayEntries.fold(0.0, (sum, entry) => sum + entry.fats),
-    };
+  Future<List<NutritionEntry>> getEntriesByMealType(String mealType, DateTime date) async {
+    try {
+      return await _database.getNutritionEntriesByMealType(_currentUserId, mealType, date);
+    } catch (e) {
+      // Fallback to in-memory data
+      final dayEntries = await getEntriesByDate(date);
+      return dayEntries.where((e) => e.mealType == mealType).toList();
+    }
+  }
+
+  Future<int> getTotalCaloriesByDate(DateTime date) async {
+    try {
+      return await _database.getTotalCaloriesByDate(_currentUserId, date);
+    } catch (e) {
+      // Fallback to in-memory calculation
+      final dayEntries = await getEntriesByDate(date);
+      return dayEntries.fold(0, (sum, entry) => sum + entry.calories);
+    }
+  }
+
+  Future<Map<String, double>> getMacrosByDate(DateTime date) async {
+    try {
+      return await _database.getMacrosByDate(_currentUserId, date);
+    } catch (e) {
+      // Fallback to in-memory calculation
+      final dayEntries = await getEntriesByDate(date);
+      return {
+        'protein': dayEntries.fold(0.0, (sum, entry) => sum + entry.protein),
+        'carbs': dayEntries.fold(0.0, (sum, entry) => sum + entry.carbs),
+        'fats': dayEntries.fold(0.0, (sum, entry) => sum + entry.fats),
+      };
+    }
   }
 
   Future<void> addEntry(NutritionEntry entry) async {
-    _entries.add(entry);
-    await _saveEntries();
+    try {
+      await _database.insertNutritionEntry(entry);
+      _entries.add(entry);
+    } catch (e) {
+      // Fallback to in-memory storage
+      _entries.add(entry);
+      await _saveEntries();
+    }
   }
 
   Future<void> deleteEntry(String id) async {
-    _entries.removeWhere((e) => e.id == id);
-    await _saveEntries();
+    try {
+      await _database.deleteNutritionEntry(id);
+      _entries.removeWhere((e) => e.id == id);
+    } catch (e) {
+      // Fallback to in-memory storage
+      _entries.removeWhere((e) => e.id == id);
+      await _saveEntries();
+    }
   }
 
   /// AI-powered food recognition from image

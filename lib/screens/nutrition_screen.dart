@@ -60,6 +60,20 @@ class _NutritionScreenState extends State<NutritionScreen> with TickerProviderSt
     }
   }
 
+  Future<Map<String, dynamic>> _loadNutritionData() async {
+    final todayCalories = await _nutritionService.getTotalCaloriesByDate(_selectedDate);
+    final macros = await _nutritionService.getMacrosByDate(_selectedDate);
+    
+    return {
+      'calories': todayCalories,
+      'macros': macros,
+    };
+  }
+
+  Future<List<String>> _getMealTypes() async {
+    return ['Breakfast', 'Lunch', 'Dinner', 'Snacks'];
+  }
+
   Future<void> _loadNutritionInsights() async {
     if (!mounted) return;
     
@@ -92,9 +106,7 @@ class _NutritionScreenState extends State<NutritionScreen> with TickerProviderSt
   @override
   Widget build(BuildContext context) {
     final locale = 'en';
-    final todayCalories = _nutritionService.getTotalCaloriesByDate(_selectedDate);
     final goal = _authService.currentUser?.dailyCalorieGoal ?? 2200;
-    final macros = _nutritionService.getMacrosByDate(_selectedDate);
     final waterIntake = _waterService.getTodayIntake();
     final waterGoal = _waterService.dailyGoal;
 
@@ -104,30 +116,55 @@ class _NutritionScreenState extends State<NutritionScreen> with TickerProviderSt
           ? _buildLoadingState()
           : FadeTransition(
               opacity: _fadeAnimation,
-              child: SingleChildScrollView(
-                child: Padding(
-                  padding: EdgeInsets.all(20),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      _buildHeader(locale),
-                      SizedBox(height: 20),
-                      _buildCalorieCard(todayCalories, goal),
-                      SizedBox(height: 24),
-                      _buildMacroCards(macros),
-                      SizedBox(height: 24),
-                      _buildWaterIntakeCard(waterIntake, waterGoal),
-                      SizedBox(height: 24),
-                      _buildActionButtons(locale),
-                      SizedBox(height: 24),
-                      _buildNutritionInsights(),
-                      SizedBox(height: 24),
-                      _buildMealSuggestions(locale),
-                      SizedBox(height: 24),
-                      ...AppConstants.mealTypes.map((mealType) => _buildMealSection(mealType)),
-                    ],
-                  ),
-                ),
+              child: FutureBuilder<Map<String, dynamic>>(
+                future: _loadNutritionData(),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return _buildLoadingState();
+                  }
+                  
+                  final data = snapshot.data ?? {};
+                  final todayCalories = data['calories'] as int? ?? 0;
+                  final macros = data['macros'] as Map<String, double>? ?? {};
+                  
+                  return SingleChildScrollView(
+                    child: Padding(
+                      padding: EdgeInsets.all(20),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          _buildHeader(locale),
+                          SizedBox(height: 20),
+                          _buildCalorieCard(todayCalories, goal),
+                          SizedBox(height: 24),
+                          _buildMacroCards(macros),
+                          SizedBox(height: 24),
+                          _buildWaterIntakeCard(waterIntake, waterGoal),
+                          SizedBox(height: 24),
+                          _buildActionButtons(locale),
+                          SizedBox(height: 24),
+                          _buildNutritionInsights(),
+                          SizedBox(height: 24),
+                          _buildMealSuggestions(locale),
+                          SizedBox(height: 24),
+                          FutureBuilder<List<String>>(
+                            future: _getMealTypes(),
+                            builder: (context, mealTypesSnapshot) {
+                              if (mealTypesSnapshot.hasData) {
+                                return Column(
+                                  children: mealTypesSnapshot.data!
+                                      .map((mealType) => _buildMealSection(mealType))
+                                      .toList(),
+                                );
+                              }
+                              return SizedBox.shrink();
+                            },
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
               ),
             ),
       ),
@@ -719,27 +756,40 @@ class _NutritionScreenState extends State<NutritionScreen> with TickerProviderSt
   }
 
   Widget _buildMealSection(String mealType) {
-    final entries = _nutritionService.getEntriesByMealType(mealType, _selectedDate);
     final locale = 'en';
 
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(AppLocalizations.get(mealType.toLowerCase(), locale), style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-        SizedBox(height: 12),
-        if (entries.isEmpty)
-          Container(
-            padding: EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              color: Colors.grey.shade100,
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Center(child: Text('No ${mealType.toLowerCase()} logged', style: TextStyle(color: Colors.grey.shade600))),
-          )
-        else
-          ...entries.map((entry) => _buildMealCard(entry)),
-        SizedBox(height: 20),
-      ],
+    return FutureBuilder<List<NutritionEntry>>(
+      future: _nutritionService.getEntriesByMealType(mealType, _selectedDate),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return Container(
+            height: 100,
+            child: Center(child: CircularProgressIndicator()),
+          );
+        }
+        
+        final entries = snapshot.data ?? [];
+        
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(AppLocalizations.get(mealType.toLowerCase(), locale), style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            SizedBox(height: 12),
+            if (entries.isEmpty)
+              Container(
+                padding: EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: Colors.grey.shade100,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Center(child: Text('No ${mealType.toLowerCase()} logged', style: TextStyle(color: Colors.grey.shade600))),
+              )
+            else
+              ...entries.map((entry) => _buildMealCard(entry)),
+            SizedBox(height: 20),
+          ],
+        );
+      },
     );
   }
 

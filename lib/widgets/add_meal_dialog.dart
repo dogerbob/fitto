@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fitto/services/nutrition_service.dart';
 import 'package:fitto/models/nutrition_entry.dart';
+import 'package:fitto/screens/food_search_screen.dart';
 
 class AddMealDialog extends StatefulWidget {
   final VoidCallback onMealAdded;
@@ -86,6 +87,8 @@ class _AddMealDialogState extends State<AddMealDialog> {
                 ),
                 SizedBox(height: 24),
                 _buildMealTypeSelector(),
+                SizedBox(height: 20),
+                _buildSearchButton(),
                 SizedBox(height: 20),
                 _buildTextField(
                   controller: _nameController,
@@ -266,6 +269,51 @@ class _AddMealDialogState extends State<AddMealDialog> {
     );
   }
 
+  Widget _buildSearchButton() {
+    return Container(
+      width: double.infinity,
+      height: 48,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [Color(0xFFA8D8EA), Color(0xFF7FBFD4)],
+        ),
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            color: Color(0xFFA8D8EA).withOpacity(0.3),
+            blurRadius: 8,
+            offset: Offset(0, 4),
+          ),
+        ],
+      ),
+      child: ElevatedButton(
+        onPressed: _openFoodSearch,
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.transparent,
+          shadowColor: Colors.transparent,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.search, color: Colors.white, size: 20),
+            SizedBox(width: 8),
+            Text(
+              'Search Food Database',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   Widget _buildTextField({
     required TextEditingController controller,
     required String label,
@@ -311,6 +359,20 @@ class _AddMealDialogState extends State<AddMealDialog> {
         ),
       ],
     );
+  }
+
+  Future<void> _openFoodSearch() async {
+    final result = await Navigator.push<bool>(
+      context,
+      MaterialPageRoute(
+        builder: (context) => FoodSearchScreen(mealType: _selectedMealType),
+      ),
+    );
+    
+    if (result == true && mounted) {
+      Navigator.pop(context);
+      widget.onMealAdded();
+    }
   }
 
   Future<void> _saveMeal() async {

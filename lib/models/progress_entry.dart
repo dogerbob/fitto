@@ -4,6 +4,8 @@ class ProgressEntry {
   final DateTime date;
   final String type;
   final double value;
+  final String unit;
+  final String? notes;
   final DateTime createdAt;
   final DateTime updatedAt;
 
@@ -13,6 +15,8 @@ class ProgressEntry {
     required this.date,
     required this.type,
     required this.value,
+    required this.unit,
+    this.notes,
     required this.createdAt,
     required this.updatedAt,
   });
@@ -23,6 +27,8 @@ class ProgressEntry {
     'date': date.toIso8601String(),
     'type': type,
     'value': value,
+    'unit': unit,
+    'notes': notes,
     'createdAt': createdAt.toIso8601String(),
     'updatedAt': updatedAt.toIso8601String(),
   };
@@ -33,6 +39,8 @@ class ProgressEntry {
     date: DateTime.parse(json['date'] as String),
     type: json['type'] as String,
     value: (json['value'] as num).toDouble(),
+    unit: json['unit'] as String,
+    notes: json['notes'] as String?,
     createdAt: DateTime.parse(json['createdAt'] as String),
     updatedAt: DateTime.parse(json['updatedAt'] as String),
   );
@@ -43,6 +51,8 @@ class ProgressEntry {
     DateTime? date,
     String? type,
     double? value,
+    String? unit,
+    String? notes,
     DateTime? createdAt,
     DateTime? updatedAt,
   }) => ProgressEntry(
@@ -51,6 +61,8 @@ class ProgressEntry {
     date: date ?? this.date,
     type: type ?? this.type,
     value: value ?? this.value,
+    unit: unit ?? this.unit,
+    notes: notes ?? this.notes,
     createdAt: createdAt ?? this.createdAt,
     updatedAt: updatedAt ?? this.updatedAt,
   );
