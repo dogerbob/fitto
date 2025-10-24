@@ -59,6 +59,7 @@ import 'package:fitto/screens/routine_screen.dart';
 import 'package:fitto/screens/splash_screen.dart';
 import 'package:fitto/screens/update_app_screen.dart';
 import 'package:fitto/screens/weight_screen.dart';
+import 'package:fitto/screens/onboarding/onboarding_flow.dart';
 import 'package:fitto/theme/theme.dart';
 import 'package:fitto/widgets/core/about.dart';
 import 'package:fitto/widgets/core/log_overview.dart';
@@ -138,7 +139,20 @@ class MainApp extends StatelessWidget {
   Widget _getHomeScreen(AuthProvider auth) {
     switch (auth.state) {
       case AuthState.loggedIn:
-        return HomeTabsScreen();
+        return FutureBuilder(
+          future: OnboardingManager.shouldShowOnboarding(),
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const SplashScreen();
+            }
+            
+            if (snapshot.data == true) {
+              return const OnboardingFlow();
+            }
+            
+            return HomeTabsScreen();
+          },
+        );
       case AuthState.updateRequired:
         return const UpdateAppScreen();
       default:
@@ -252,6 +266,8 @@ class MainApp extends StatelessWidget {
               SettingsPage.routeName: (ctx) => const SettingsPage(),
               LogOverviewPage.routeName: (ctx) => const LogOverviewPage(),
               ConfigurePlatesScreen.routeName: (ctx) => const ConfigurePlatesScreen(),
+              // Onboarding routes
+              OnboardingFlow.routeName: (ctx) => const OnboardingFlow(),
             },
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             supportedLocales: AppLocalizations.supportedLocales,
