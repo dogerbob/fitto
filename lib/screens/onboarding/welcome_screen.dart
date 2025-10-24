@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'goal_setting_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   static const String routeName = '/onboarding/welcome';

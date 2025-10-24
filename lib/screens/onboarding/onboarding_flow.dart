@@ -15,7 +15,7 @@ class OnboardingFlow extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Fitto Onboarding',
-      theme: Theme.of(context).theme,
+      theme: Theme.of(context),
       home: const OnboardingNavigator(),
       routes: {
         WelcomeScreen.routeName: (context) => const WelcomeScreen(),

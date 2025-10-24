@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'preferences_screen.dart';
 
 class PersonalInfoScreen extends StatefulWidget {
   static const String routeName = '/onboarding/personal-info';

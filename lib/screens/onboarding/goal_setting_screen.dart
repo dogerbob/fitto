@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fitto/l10n/generated/app_localizations.dart';
+import 'personal_info_screen.dart';
 
 class GoalSettingScreen extends StatefulWidget {
   static const String routeName = '/onboarding/goal-setting';
