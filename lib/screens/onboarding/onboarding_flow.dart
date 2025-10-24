@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fitto/helpers/shared_preferences.dart';
 import 'package:fitto/screens/home_tabs_screen.dart';
+import 'package:fitto/l10n/generated/app_localizations.dart';
 import 'welcome_screen.dart';
 import 'goal_setting_screen.dart';
 import 'personal_info_screen.dart';
@@ -17,6 +18,8 @@ class OnboardingFlow extends StatelessWidget {
       title: 'Fitto Onboarding',
       theme: Theme.of(context),
       home: const OnboardingNavigator(),
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       routes: {
         WelcomeScreen.routeName: (context) => const WelcomeScreen(),
         GoalSettingScreen.routeName: (context) => const GoalSettingScreen(),

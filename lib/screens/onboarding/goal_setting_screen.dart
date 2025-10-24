@@ -43,7 +43,7 @@ class _GoalSettingScreenState extends State<GoalSettingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     
     return Scaffold(
       appBar: AppBar(
